@@ -379,7 +379,7 @@ button {
     align-items: center;
     padding: 32px;
     gap: 26px;
-    transform: translateX(100%);
+    transform: translateX(130%);
     transition: transform 0.45s var(--ease);
     border-left: 1px solid var(--border-glass);
     height: 100vh;
