@@ -362,7 +362,12 @@ button {
   align-items: center;
   justify-content: center;
 }
-
+.nav-toggle span{
+  position: absolute;
+}
+.nav-links .logo-mobil{
+  display: none;
+}
 @media (max-width: 991px) {
   .nav-links {
     position: fixed;
@@ -378,9 +383,11 @@ button {
     transition: transform 0.45s var(--ease);
     border-left: 1px solid var(--border-glass);
     height: 100vh;
-    justify-content: space-around;
+    justify-content: center;
   }
-
+    .nav-links .logo-mobil {
+      display: block;
+    }
 
   .nav-links.is-open {
     transform: translateX(0);
