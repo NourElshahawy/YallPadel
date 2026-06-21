@@ -284,3 +284,23 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
+
+/* ---------- Court Owner modal form ---------- */
+  const ownerForm = document.getElementById('ownerForm');
+  if (ownerForm){
+    ownerForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      // TODO: wire this up to your backend / CRM endpoint
+      const submitBtn = ownerForm.querySelector('button[type="submit"]');
+      submitBtn.textContent = 'Request sent ✓';
+      submitBtn.disabled = true;
+      setTimeout(() => {
+        const modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('ownerModal'));
+        modal.hide();
+        ownerForm.reset();
+        submitBtn.textContent = 'Request a Callback';
+        submitBtn.disabled = false;
+      }, 1800);
+    });
+  }

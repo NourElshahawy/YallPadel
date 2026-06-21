@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YallPadel — Book Padel Courts in Mansoura</title>
+    <meta name="description"
+        content="YallPadel gathers every padel court in Mansoura into one place. Compare prices, check real-time availability, and book your court in under a minute." />
+    <link rel="icon" type="image/png" href="./assets/imgs/icon3.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- AOS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- App styles -->
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+
+    <!-- ===================== Navbar ===================== -->
+    <header class="navbar-ph">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="./" class="brand"><img src="./assets/imgs/logo-removebg.png" alt=""></a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="./">Home</a>
+                <a href="./courts.html">Book A Court</a>
+                <a href="./news.html">Padel News</a>
+                <a href="#contact">Contact Us</a>
+                <div class="d-flex d-lg-none flex-column gap-3 mt-3">
+                    <a href="./login.html" class="btn btn-ghost btn-sm">Log In</a>
+                    <a href="./register.html" class="btn btn-accent btn-sm">Register</a>
+                </div>
+            </nav>
+
+            <div class="navbar-cta">
+                <a href="./login.html" class="btn btn-ghost btn-sm">Log In</a>
+                <a href="./register.html" class="btn btn-ghost btn-sm">Register</a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                    <span class="material-symbols-rounded">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="details-hero">
+        <section class="listing-hero">
+            <div class="container">
+                <div class="breadcrumb-ph" data-aos="fade-up">
+                    <a href="index.html">Home</a>
+                    <span class="material-symbols-rounded">chevron_right</span>
+                    <span>News</span>
+                </div>
+                <h1 data-aos="fade-up" data-aos-delay="60">News &amp; Tournaments</h1>
+                <p class="results-count" data-aos="fade-up" data-aos-delay="100">
+                    <b id="newsCount">9</b> updates news from courts across Mansoura
+                </p>
+            </div>
+        </section>
+        
+        <section class="section-tight">
+            <div class="container">
+        
+                <!-- ===================== Featured banner ===================== -->
+                <div class="news-feature-banner" data-aos="fade-up">
+                    <div class="news-feature-media">
+                        <span class="news-tag news-tag-tournament">Tournament</span>
+                        <img data-fallback
+                            src="https://images.unsplash.com/photo-1622163642998-1ea32b0bbc67?auto=format&fit=crop&w=1200&q=80"
+                            alt="Mansoura Open 2026 tournament">
+                    </div>
+                    <div class="news-feature-info">
+                        <span class="eyebrow">Featured</span>
+                        <h2>Mansoura Open 2026: 32 Teams, One Champion</h2>
+                        <p>Registration is open for the city's biggest amateur padel tournament, hosted at Padel Arena Mansoura
+                            this July.</p>
+                        <span class="news-date"><span class="material-symbols-rounded">calendar_month</span> June 28,
+                            2026</span>
+                        <a href="news-details.html" class="btn btn-accent btn-sm" style="width:fit-content;">Read Full Story
+                            <span class="material-symbols-rounded" style="font-size:16px;">arrow_forward</span></a>
+                    </div>
+                </div>
+        
+                <!-- ===================== Category filter ===================== -->
+                <div class="news-filter-row" data-aos="fade-up">
+                    <div class="chip-select" id="newsFilters">
+                        <span class="chip-option is-active" data-category="all">All</span>
+                        <span class="chip-option" data-category="tournament">Tournaments</span>
+                        <span class="chip-option" data-category="announcement">Announcements</span>
+                        <span class="chip-option" data-category="maintenance">Maintenance</span>
+                        <span class="chip-option" data-category="partnership">Partnerships</span>
+                    </div>
+                </div>
+        
+                <!-- ===================== News grid ===================== -->
+                <div class="row g-4" id="newsGrid">
+        
+                    <div class="col-md-6 col-lg-4 news-grid-item" data-category="announcement" data-aos="fade-up">
+                        <a href="news-details.html" class="news-card">
+                            <div class="news-card-media">
+                                <span class="news-tag news-tag-announcement">Announcement</span>
+                                <img data-fallback
+                                    src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=600&q=80"
+                                    alt="Velocity Padel new courts">
+                            </div>
+                            <div class="news-card-body">
+                                <h3>Velocity Padel adds 3 new indoor courts</h3>
+                                <p class="news-card-excerpt">The Toriel club expands to 10 courts total, with three new
+                                    air-conditioned indoor lanes opening next month.</p>
+                                <div class="news-card-foot">
+                                    <span class="news-date">June 18, 2026</span>
+                                    <span class="read-more-link">Read <span
+                                            class="material-symbols-rounded">arrow_forward</span></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+        
+                    <div class="col-md-6 col-lg-4 news-grid-item" data-category="maintenance" data-aos="fade-up"
+                        data-aos-delay="60">
+                        <a href="news-details.html" class="news-card">
+                            <div class="news-card-media">
+                                <span class="news-tag news-tag-maintenance">Maintenance</span>
+                                <img data-fallback
+                                    src="https://images.unsplash.com/photo-1599058917765-a780eda07a3e?auto=format&fit=crop&w=600&q=80"
+                                    alt="Smash Point resurfacing">
+                            </div>
+                            <div class="news-card-body">
+                                <h3>Smash Point closed for resurfacing, June 23–25</h3>
+                                <p class="news-card-excerpt">All courts at Smash Point will be offline for three days while the
+                                    playing surface is fully replaced.</p>
+                                <div class="news-card-foot">
+                                    <span class="news-date">June 20, 2026</span>
+                                    <span class="read-more-link">Read <span
+                                            class="material-symbols-rounded">arrow_forward</span></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+        
+                    <div class="col-md-6 col-lg-4 news-grid-item" data-category="partnership" data-aos="fade-up"
+                        data-aos-delay="120">
+                        <a href="news-details.html" class="news-card">
+                            <div class="news-card-media">
+                                <span class="news-tag news-tag-partnership">Partnership</span>
+                                <img data-fallback
+                                    src="https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?auto=format&fit=crop&w=600&q=80"
+                                    alt="Ace Club student discount partnership">
+                            </div>
+                            <div class="news-card-body">
+                                <h3>PadelHub partners with Ace Club for student discounts</h3>
+                                <p class="news-card-excerpt">Students with a valid university ID now get 20% off all bookings at
+                                    Ace Club, every weekday before 5 PM.</p>
+                                <div class="news-card-foot">
+                                    <span class="news-date">June 15, 2026</span>
+                                    <span class="read-more-link">Read <span
+                                            class="material-symbols-rounded">arrow_forward</span></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+        
+                    <div class="col-md-6 col-lg-4 news-grid-item" data-category="announcement" data-aos="fade-up">
+                        <a href="news-details.html" class="news-card">
+                            <div class="news-card-media">
+                                <span class="news-tag news-tag-announcement">Announcement</span>
+                                <img data-fallback
+                                    src="https://images.unsplash.com/photo-1542144582-1ba00456b5e3?auto=format&fit=crop&w=600&q=80"
+                                    alt="Padel Arena Mansoura award">
+                            </div>
+                            <div class="news-card-body">
+                                <h3>Padel Arena Mansoura wins "Best New Venue"</h3>
+                                <p class="news-card-excerpt">The 12-court facility was recognized at this year's Egypt Sports
+                                    Venues Awards for design and player experience.</p>
+                                <div class="news-card-foot">
+                                    <span class="news-date">June 10, 2026</span>
+                                    <span class="read-more-link">Read <span
+                                            class="material-symbols-rounded">arrow_forward</span></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+        
+                    <div class="col-md-6 col-lg-4 news-grid-item" data-category="tournament" data-aos="fade-up"
+                        data-aos-delay="60">
+                        <a href="news-details.html" class="news-card">
+                            <div class="news-card-media">
+                                <span class="news-tag news-tag-tournament">Tournament</span>
+                                <img data-fallback
+                                    src="https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&w=600&q=80"
+                                    alt="Net Zone Padel beginner clinic">
+                            </div>
+                            <div class="news-card-body">
+                                <h3>Net Zone Padel hosts free beginner clinic this weekend</h3>
+                                <p class="news-card-excerpt">A two-hour introductory session covering rules, scoring, and basic
+                                    technique — open to all skill levels, no booking required.</p>
+                                <div class="news-card-foot">
+                                    <span class="news-date">June 8, 2026</span>
+                                    <span class="read-more-link">Read <span
+                                            class="material-symbols-rounded">arrow_forward</span></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+        
+                    <div class="col-md-6 col-lg-4 news-grid-item" data-category="announcement" data-aos="fade-up"
+                        data-aos-delay="120">
+                        <a href="news-details.html" class="news-card">
+                            <div class="news-card-media">
+                                <span class="news-tag news-tag-announcement">Announcement</span>
+                                <img data-fallback
+                                    src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=600&q=80"
+                                    alt="Court Side extended hours">
+                            </div>
+                            <div class="news-card-body">
+                                <h3>Court Side extends opening hours to midnight</h3>
+                                <p class="news-card-excerpt">Starting this week, Court Side in Tawreed stays open until 12 AM
+                                    daily to meet demand for late-night bookings.</p>
+                                <div class="news-card-foot">
+                                    <span class="news-date">June 5, 2026</span>
+                                    <span class="read-more-link">Read <span
+                                            class="material-symbols-rounded">arrow_forward</span></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+        
+                    <div class="col-md-6 col-lg-4 news-grid-item" data-category="announcement" data-aos="fade-up">
+                        <a href="news-details.html" class="news-card">
+                            <div class="news-card-media">
+                                <span class="news-tag news-tag-announcement">Announcement</span>
+                                <img data-fallback
+                                    src="https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?auto=format&fit=crop&w=600&q=80"
+                                    alt="Ace Club LED floodlighting">
+                            </div>
+                            <div class="news-card-body">
+                                <h3>Ace Club upgrades all courts with LED floodlighting</h3>
+                                <p class="news-card-excerpt">Brighter, more energy-efficient lighting now covers all six courts,
+                                    improving visibility for evening matches.</p>
+                                <div class="news-card-foot">
+                                    <span class="news-date">June 1, 2026</span>
+                                    <span class="read-more-link">Read <span
+                                            class="material-symbols-rounded">arrow_forward</span></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+        
+                    <div class="col-md-6 col-lg-4 news-grid-item" data-category="partnership" data-aos="fade-up"
+                        data-aos-delay="60">
+                        <a href="news-details.html" class="news-card">
+                            <div class="news-card-media">
+                                <span class="news-tag news-tag-partnership">Partnership</span>
+                                <img data-fallback
+                                    src="https://images.unsplash.com/photo-1542043370-c2c8d8dac9e3?auto=format&fit=crop&w=600&q=80"
+                                    alt="Elite Padel Club second branch">
+                            </div>
+                            <div class="news-card-body">
+                                <h3>Elite Padel Club to open second branch in Toriel</h3>
+                                <p class="news-card-excerpt">A new six-court location is set to open later this year, with
+                                    PadelHub listing pre-launch availability soon.</p>
+                                <div class="news-card-foot">
+                                    <span class="news-date">May 28, 2026</span>
+                                    <span class="read-more-link">Read <span
+                                            class="material-symbols-rounded">arrow_forward</span></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+        
+                </div>
+        
+                <div class="empty-state d-none" id="newsEmptyState">
+                    <span class="material-symbols-rounded">search_off</span>
+                    <h3>No news in this category yet</h3>
+                    <p>Check back soon, or browse all updates instead.</p>
+                    <button class="btn btn-accent btn-sm" id="newsEmptyReset">Show all news</button>
+                </div>
+        
+                <div class="pagination-ph">
+                    <span class="page-btn"><span class="material-symbols-rounded">chevron_left</span></span>
+                    <span class="page-btn is-active">1</span>
+                    <span class="page-btn">2</span>
+                    <span class="page-btn"><span class="material-symbols-rounded">chevron_right</span></span>
+                </div>
+        
+            </div>
+        </section>
+    </main>
+
+    <div class="section-tight"></div>
+
+    <!-- ===================== Footer ===================== -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 footer-brand" id="about">
+                    <a href="./" class="brand">
+                        <img src="./assets/imgs/logo-removebg.png" alt="">
+                    </a>
+                    <p>
+                        The fastest way to find and book a padel court in Mansoura —
+                        real-time slots, verified clubs, secure payment.
+                    </p>
+                    <div class="social-row">
+                        <a href="https://instagram.com/NourElshahawy" target="_blank" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+    
+                        <a href="https://facebook.com/NourElshahawy" target="_blank" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+    
+                        <a href="https://wa.me/201065801252" target="_blank" aria-label="WhatsApp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="col-6 col-lg-2 footer-col">
+                    <h4>Platform</h4>
+                    <a href="./">Home</a>
+                    <a href="#courts">Book a Court</a>
+                    <a href="#news">Padel News</a>
+                </div>
+    
+                <div class="col-6 col-lg-2 footer-col">
+                    <h4>Support</h4>
+                    <a href="#">Help Center</a>
+                    <a href="#">Cancellations</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#ownerModal">For Court Owners</a>
+                    <a href="#">Terms & Privacy</a>
+                </div>
+    
+                <div class="col-lg-4 footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <a href="https://maps.google.com/?q=El+Mashaya+Mansoura+Dakahlia+Egypt" target="_blank">
+                                <span class="material-symbols-rounded">location_on</span>
+                                El Mashaya, Mansoura, Dakahlia, Egypt
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="tel:+201065801252">
+                                <span class="material-symbols-rounded">call</span>
+                                +20 1065801252
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="mailto:Enour1847@gmail.com">
+                                <span class="material-symbols-rounded">mail</span>
+                                Enour1847@gmail.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="footer-bottom">
+                <span>© 2026 YallPadel. All rights reserved.</span>
+                <span><a href="#">Terms of Service</a> ·
+                    <a href="#">Privacy Policy</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

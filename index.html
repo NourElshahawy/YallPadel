@@ -1,887 +1,720 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PadelHub — Book Padel Courts in Mansoura</title>
-    <meta
-      name="description"
-      content="PadelHub gathers every padel court in Mansoura into one place. Compare prices, check real-time availability, and book your court in under a minute."
-    />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YallPadel — Book Padel Courts in Mansoura</title>
+  <meta name="description"
+    content="YallPadel gathers every padel court in Mansoura into one place. Compare prices, check real-time availability, and book your court in under a minute." />
+  <link rel="icon" type="image/png" href="./assets/imgs/icon3.png">
 
-    <!-- Bootstrap -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-    <!-- AOS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"
-      rel="stylesheet"
-    />
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- App styles -->
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
-  <body>
-    <!-- ===================== Navbar ===================== -->
-    <header class="navbar-ph">
-      <div class="container d-flex align-items-center justify-content-between">
-        <a href="./" class="brand"><img src="./assets/imgs/logo-removebg.png" alt=""></a>
+  <!-- AOS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-        <nav class="nav-links" id="navLinks">
-          <a href="./">Home</a>
-          <a href="#courts">Book A Court</a>
-          <a href="#news">Padel News</a>
-          <a href="#contact">Contact</a>
-          <div class="d-flex d-lg-none flex-column gap-3 mt-3">
-            <a href="./login.html" class="btn btn-ghost btn-sm">Log In</a>
-            <a href="./register.html" class="btn btn-accent btn-sm">Register</a>
-          </div>
-        </nav>
+  <!-- App styles -->
+  <link rel="stylesheet" href="./css/login.css">
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
 
-        <div class="navbar-cta">
+<body>
+  <!-- ===================== Navbar ===================== -->
+  <header class="navbar-ph">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a href="./" class="brand"><img src="./assets/imgs/logo-removebg.png" alt=""></a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="./">Home</a>
+        <a href="#courts">Book A Court</a>
+        <a href="#news">Padel News</a>
+        <a href="#contact">Contact Us</a>
+        <div class="d-flex d-lg-none flex-column gap-3 mt-3">
           <a href="./login.html" class="btn btn-ghost btn-sm">Log In</a>
           <a href="./register.html" class="btn btn-accent btn-sm">Register</a>
-          <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-            <span class="material-symbols-rounded">menu</span>
+        </div>
+      </nav>
+
+      <div class="navbar-cta">
+        <a href="./login.html" class="btn btn-ghost btn-sm">Log In</a>
+        <a href="./register.html" class="btn btn-ghost btn-sm">Register</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span class="material-symbols-rounded">menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== Hero ===================== -->
+  <section class="hero">
+    <span class="hero-shape s1"></span>
+    <span class="hero-shape s2"></span>
+    <span class="hero-shape s3"></span>
+    <span class="hero-shape s4"></span>
+
+    <div class="container hero-content">
+      <span class="hero-badge" data-aos="fade-up">
+        <img src="./assets/imgs/main-icon.png" class="pulse-img" alt="">
+        Live availability across 100+ courts
+        in Mansoura
+      </span>
+
+      <h1 data-aos="fade-up" data-aos-delay="80">
+        Book Your Padel Court in
+        <span class="accent-underline">Less Than a Minute</span>
+      </h1>
+
+      <p class="hero-sub" data-aos="fade-up" data-aos-delay="160">
+        Find available courts, compare prices, and reserve instantly across
+        Mansoura — no calls, no waiting, no guesswork.
+      </p>
+
+      <div class="search-card" data-aos="fade-up" data-aos-delay="240">
+        <div class="search-grid">
+          <div class="search-field">
+            <label><span class="material-symbols-rounded">location_on</span>
+              Regon</label>
+            <select>
+              <option>Any area in Mansoura</option>
+              <option>Any area in Domiatt</option>
+              <option>Any area in Gamsa</option>
+              <option>Any area in Ras Elbar</option>
+            </select>
+          </div>
+          <div class="search-field">
+            <label><span class="material-symbols-rounded">location_on</span>
+              Area</label>
+            <select>
+              <option>Any area in Mansoura</option>
+              <option>El Mashaya</option>
+              <option>Tawreed</option>
+              <option>60 Street (El Setteen)</option>
+              <option>Toriel</option>
+              <option>Gomhouria Street</option>
+            </select>
+          </div>
+          <button class="btn btn-accent search-submit">
+            <img src="./assets/imgs/icon-location.png" alt="">
+            Check Courts
           </button>
         </div>
       </div>
-    </header>
 
-    <!-- ===================== Hero ===================== -->
-    <section class="hero">
-      <span class="hero-shape s1"></span>
-      <span class="hero-shape s2"></span>
-      <span class="hero-shape s3"></span>
-      <span class="hero-shape s4"></span>
-
-      <div class="container hero-content">
-        <span class="hero-badge" data-aos="fade-up">
-          <span class="pulse-dot"></span> Live availability across 100+ courts
-          in Mansoura
-        </span>
-
-        <h1 data-aos="fade-up" data-aos-delay="80">
-          Book Your Padel Court in
-          <span class="accent-underline">Less Than a Minute</span>
-        </h1>
-
-        <p class="hero-sub" data-aos="fade-up" data-aos-delay="160">
-          Find available courts, compare prices, and reserve instantly across
-          Mansoura — no calls, no waiting, no guesswork.
-        </p>
-
-        <div class="search-card" data-aos="fade-up" data-aos-delay="240">
-          <div class="search-grid">
-            <div class="search-field">
-              <label
-                ><span class="material-symbols-rounded">location_on</span>
-                Regon</label
-              >
-              <select>
-                <option>Any area in Mansoura</option>
-                <option>Any area in Domiatt</option>
-                <option>Any area in Gamsa</option>
-                <option>Any area in Ras Elbar</option>
-              </select>
-            </div>
-            <div class="search-field">
-              <label
-                ><span class="material-symbols-rounded">location_on</span>
-                Area</label
-              >
-              <select>
-                <option>Any area in Mansoura</option>
-                <option>El Mashaya</option>
-                <option>Tawreed</option>
-                <option>60 Street (El Setteen)</option>
-                <option>Toriel</option>
-                <option>Gomhouria Street</option>
-              </select>
-            </div>
-            <button class="btn btn-accent search-submit">
-              <span class="material-symbols-rounded">search</span> Check Courts
-            </button>
-          </div>
-        </div>
-
-        <div class="hero-meta" data-aos="fade-up" data-aos-delay="320">
-          <span class="meta-item"
-            ><span class="material-symbols-rounded">verified</span> Verified
-            courts only</span
-          >
-          <span class="meta-item"
-            ><span class="material-symbols-rounded">bolt</span> Instant
-            confirmation</span
-          >
-          <span class="meta-item"
-            ><span class="material-symbols-rounded">lock</span> Secure online
-            payment</span
-          >
-        </div>
+      <div class="hero-meta" data-aos="fade-up" data-aos-delay="320">
+        <span class="meta-item"><span class="material-symbols-rounded">verified</span> Verified
+          courts only</span>
+        <span class="meta-item"><span class="material-symbols-rounded">bolt</span> Instant
+          confirmation</span>
+        <span class="meta-item"><span class="material-symbols-rounded">lock</span> Secure online
+          payment</span>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ===================== Featured Courts ===================== -->
-    <section class="section" id="courts">
-      <div class="container">
-        <div class="section-head">
-          <div data-aos="fade-up">
-            <span class="eyebrow">Featured Courts</span>
-            <h2 class="section-title mt-3">
-              Mansoura's top-rated padel courts
-            </h2>
-            <p class="section-sub" data-aos="fade-up" data-aos-delay="80">
-              Hand-picked clubs with verified facilities, transparent pricing,
-              and slots that update the moment someone books.
-            </p>
-          </div>
-          <div class="fade-up">
-            <div class="search-field">
-              <label
-                ><span class="material-symbols-rounded">location_on</span>
-                Regon</label
-              >
-              <select>
-                <option>Any area in Mansoura</option>
-                <option>Any area in Domiatt</option>
-                <option>Any area in Gamsa</option>
-                <option>Any area in Ras Elbar</option>
-              </select>
-            </div>
-          </div>
-        </div>
-
-        <div class="row g-4">
-          <!-- Card 1 -->
-          <div class="col-md-6 col-lg-4" data-aos="fade-up">
-            <div class="court-card">
-              <div class="court-media">
-                <span class="court-badge-live"
-                  ><span class="pulse-dot"></span> Live</span
-                >
-                <span class="court-rating"
-                  ><span class="material-symbols-rounded">star</span> 4.9</span
-                >
-                <img
-                  data-fallback
-                  src="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=900&q=80"
-                  alt="Padel Arena Mansoura court"
-                />
-                <span class="court-price-tag">150 EGP <span>/ hour</span></span>
-              </div>
-              <div class="court-body">
-                <h3 class="court-name">Padel Arena Mansoura</h3>
-                <span class="court-loc"
-                  ><span class="material-symbols-rounded">location_on</span> El
-                  Mashaya, Mansoura</span
-                >
-                <div class="court-stats">
-                  <div class="stat"><b>12</b><span>Courts</span></div>
-                  <div class="stat"><b>4.9</b><span>Rating</span></div>
-                  <div class="stat"><b>2.1k</b><span>Bookings</span></div>
-                </div>
-                <div>
-                  <div
-                    class="d-flex justify-content-between align-items-center mb-2"
-                  >
-                    <span
-                      style="
-                        font-size: 0.78rem;
-                        color: var(--text-faint);
-                        text-transform: uppercase;
-                        letter-spacing: 0.05em;
-                      "
-                      >Available today</span
-                    >
-                    <span
-                      style="font-size: 0.72rem; color: var(--text-faint)"
-                      data-live-updated
-                      data-seconds="2"
-                      >Updated 2s ago</span
-                    >
-                  </div>
-                  <div class="slot-row">
-                    <span class="slot-chip" data-time="5 PM">5 PM</span>
-                    <span class="slot-chip" data-time="6 PM">6 PM</span>
-                    <span class="slot-chip" data-time="8 PM">8 PM</span>
-                    <span class="slot-chip" data-time="9 PM">9 PM</span>
-                  </div>
-                </div>
-                <div class="court-foot">
-                  <a
-                    href="./court-details.html"
-                    class="btn btn-accent btn-sm btn-block"
-                    >Book Now</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
-            <div class="court-card">
-              <div class="court-media">
-                <span class="court-badge-live"
-                  ><span class="pulse-dot"></span> Live</span
-                >
-                <span class="court-rating"
-                  ><span class="material-symbols-rounded">star</span> 4.8</span
-                >
-                <img
-                  data-fallback
-                  src="https://images.unsplash.com/photo-1599058917765-a780eda07a3e?auto=format&fit=crop&w=900&q=80"
-                  alt="Smash Point court"
-                />
-                <span class="court-price-tag">130 EGP <span>/ hour</span></span>
-              </div>
-              <div class="court-body">
-                <h3 class="court-name">Smash Point</h3>
-                <span class="court-loc"
-                  ><span class="material-symbols-rounded">location_on</span>
-                  Tawreed, Mansoura</span
-                >
-                <div class="court-stats">
-                  <div class="stat"><b>8</b><span>Courts</span></div>
-                  <div class="stat"><b>4.8</b><span>Rating</span></div>
-                  <div class="stat"><b>1.4k</b><span>Bookings</span></div>
-                </div>
-                <div>
-                  <div
-                    class="d-flex justify-content-between align-items-center mb-2"
-                  >
-                    <span
-                      style="
-                        font-size: 0.78rem;
-                        color: var(--text-faint);
-                        text-transform: uppercase;
-                        letter-spacing: 0.05em;
-                      "
-                      >Available today</span
-                    >
-                    <span
-                      style="font-size: 0.72rem; color: var(--text-faint)"
-                      data-live-updated
-                      data-seconds="6"
-                      >Updated 6s ago</span
-                    >
-                  </div>
-                  <div class="slot-row">
-                    <span class="slot-chip" data-time="4 PM">4 PM</span>
-                    <span class="slot-chip is-taken" data-time="6 PM"
-                      >6 PM</span
-                    >
-                    <span class="slot-chip" data-time="7 PM">7 PM</span>
-                    <span class="slot-chip" data-time="10 PM">10 PM</span>
-                  </div>
-                </div>
-                <div class="court-foot">
-                  <a
-                    href="court-details.html"
-                    class="btn btn-accent btn-sm btn-block"
-                    >Book Now</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div
-            class="col-md-6 col-lg-4"
-            data-aos="fade-up"
-            data-aos-delay="160"
-          >
-            <div class="court-card">
-              <div class="court-media">
-                <span class="court-badge-live"
-                  ><span class="pulse-dot"></span> Live</span
-                >
-                <span class="court-rating"
-                  ><span class="material-symbols-rounded">star</span> 4.7</span
-                >
-                <img
-                  data-fallback
-                  src="https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?auto=format&fit=crop&w=900&q=80"
-                  alt="Ace Club Mansoura court"
-                />
-                <span class="court-price-tag">120 EGP <span>/ hour</span></span>
-              </div>
-              <div class="court-body">
-                <h3 class="court-name">Ace Club</h3>
-                <span class="court-loc"
-                  ><span class="material-symbols-rounded">location_on</span> 60
-                  Street, Mansoura</span
-                >
-                <div class="court-stats">
-                  <div class="stat"><b>6</b><span>Courts</span></div>
-                  <div class="stat"><b>4.7</b><span>Rating</span></div>
-                  <div class="stat"><b>980</b><span>Bookings</span></div>
-                </div>
-                <div>
-                  <div
-                    class="d-flex justify-content-between align-items-center mb-2"
-                  >
-                    <span
-                      style="
-                        font-size: 0.78rem;
-                        color: var(--text-faint);
-                        text-transform: uppercase;
-                        letter-spacing: 0.05em;
-                      "
-                      >Available today</span
-                    >
-                    <span
-                      style="font-size: 0.72rem; color: var(--text-faint)"
-                      data-live-updated
-                      data-seconds="11"
-                      >Updated 11s ago</span
-                    >
-                  </div>
-                  <div class="slot-row">
-                    <span class="slot-chip" data-time="3 PM">3 PM</span>
-                    <span class="slot-chip" data-time="5 PM">5 PM</span>
-                    <span class="slot-chip is-taken" data-time="8 PM"
-                      >8 PM</span
-                    >
-                    <span class="slot-chip" data-time="9 PM">9 PM</span>
-                  </div>
-                </div>
-                <div class="court-foot">
-                  <a
-                    href="court-details.html"
-                    class="btn btn-accent btn-sm btn-block"
-                    >Book Now</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="col-md-6 col-lg-4" data-aos="fade-up">
-            <div class="court-card">
-              <div class="court-media">
-                <span class="court-badge-live"
-                  ><span class="pulse-dot"></span> Live</span
-                >
-                <span class="court-rating"
-                  ><span class="material-symbols-rounded">star</span> 4.9</span
-                >
-                <img
-                  data-fallback
-                  src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=900&q=80"
-                  alt="Velocity Padel court"
-                />
-                <span class="court-price-tag">160 EGP <span>/ hour</span></span>
-              </div>
-              <div class="court-body">
-                <h3 class="court-name">Velocity Padel</h3>
-                <span class="court-loc"
-                  ><span class="material-symbols-rounded">location_on</span>
-                  Toriel, Mansoura</span
-                >
-                <div class="court-stats">
-                  <div class="stat"><b>10</b><span>Courts</span></div>
-                  <div class="stat"><b>4.9</b><span>Rating</span></div>
-                  <div class="stat"><b>3.0k</b><span>Bookings</span></div>
-                </div>
-                <div>
-                  <div
-                    class="d-flex justify-content-between align-items-center mb-2"
-                  >
-                    <span
-                      style="
-                        font-size: 0.78rem;
-                        color: var(--text-faint);
-                        text-transform: uppercase;
-                        letter-spacing: 0.05em;
-                      "
-                      >Available today</span
-                    >
-                    <span
-                      style="font-size: 0.72rem; color: var(--text-faint)"
-                      data-live-updated
-                      data-seconds="0"
-                      >Updated just now</span
-                    >
-                  </div>
-                  <div class="slot-row">
-                    <span class="slot-chip" data-time="2 PM">2 PM</span>
-                    <span class="slot-chip" data-time="6 PM">6 PM</span>
-                    <span class="slot-chip" data-time="7 PM">7 PM</span>
-                    <span class="slot-chip" data-time="11 PM">11 PM</span>
-                  </div>
-                </div>
-                <div class="court-foot">
-                  <a
-                    href="court-details.html"
-                    class="btn btn-accent btn-sm btn-block"
-                    >Book Now</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 5 -->
-          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
-            <div class="court-card">
-              <div class="court-media">
-                <span class="court-badge-live"
-                  ><span class="pulse-dot"></span> Live</span
-                >
-                <span class="court-rating"
-                  ><span class="material-symbols-rounded">star</span> 4.6</span
-                >
-                <img
-                  data-fallback
-                  src="https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&w=900&q=80"
-                  alt="The Court House padel"
-                />
-                <span class="court-price-tag">110 EGP <span>/ hour</span></span>
-              </div>
-              <div class="court-body">
-                <h3 class="court-name">The Court House</h3>
-                <span class="court-loc"
-                  ><span class="material-symbols-rounded">location_on</span>
-                  Gomhouria St., Mansoura</span
-                >
-                <div class="court-stats">
-                  <div class="stat"><b>5</b><span>Courts</span></div>
-                  <div class="stat"><b>4.6</b><span>Rating</span></div>
-                  <div class="stat"><b>760</b><span>Bookings</span></div>
-                </div>
-                <div>
-                  <div
-                    class="d-flex justify-content-between align-items-center mb-2"
-                  >
-                    <span
-                      style="
-                        font-size: 0.78rem;
-                        color: var(--text-faint);
-                        text-transform: uppercase;
-                        letter-spacing: 0.05em;
-                      "
-                      >Available today</span
-                    >
-                    <span
-                      style="font-size: 0.72rem; color: var(--text-faint)"
-                      data-live-updated
-                      data-seconds="4"
-                      >Updated 4s ago</span
-                    >
-                  </div>
-                  <div class="slot-row">
-                    <span class="slot-chip" data-time="1 PM">1 PM</span>
-                    <span class="slot-chip" data-time="4 PM">4 PM</span>
-                    <span class="slot-chip" data-time="9 PM">9 PM</span>
-                    <span class="slot-chip is-taken" data-time="10 PM"
-                      >10 PM</span
-                    >
-                  </div>
-                </div>
-                <div class="court-foot">
-                  <a
-                    href="court-details.html"
-                    class="btn btn-accent btn-sm btn-block"
-                    >Book Now</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 6 -->
-          <div
-            class="col-md-6 col-lg-4"
-            data-aos="fade-up"
-            data-aos-delay="160"
-          >
-            <div class="court-card">
-              <div class="court-media">
-                <span class="court-badge-live"
-                  ><span class="pulse-dot"></span> Live</span
-                >
-                <span class="court-rating"
-                  ><span class="material-symbols-rounded">star</span> 4.8</span
-                >
-                <img
-                  data-fallback
-                  src="https://images.unsplash.com/photo-1542144582-1ba00456b5e3?auto=format&fit=crop&w=900&q=80"
-                  alt="Net Zone Padel court"
-                />
-                <span class="court-price-tag">140 EGP <span>/ hour</span></span>
-              </div>
-              <div class="court-body">
-                <h3 class="court-name">Net Zone Padel</h3>
-                <span class="court-loc"
-                  ><span class="material-symbols-rounded">location_on</span> El
-                  Mashaya, Mansoura</span
-                >
-                <div class="court-stats">
-                  <div class="stat"><b>7</b><span>Courts</span></div>
-                  <div class="stat"><b>4.8</b><span>Rating</span></div>
-                  <div class="stat"><b>1.1k</b><span>Bookings</span></div>
-                </div>
-                <div>
-                  <div
-                    class="d-flex justify-content-between align-items-center mb-2"
-                  >
-                    <span
-                      style="
-                        font-size: 0.78rem;
-                        color: var(--text-faint);
-                        text-transform: uppercase;
-                        letter-spacing: 0.05em;
-                      "
-                      >Available today</span
-                    >
-                    <span
-                      style="font-size: 0.72rem; color: var(--text-faint)"
-                      data-live-updated
-                      data-seconds="8"
-                      >Updated 8s ago</span
-                    >
-                  </div>
-                  <div class="slot-row">
-                    <span class="slot-chip" data-time="3 PM">3 PM</span>
-                    <span class="slot-chip" data-time="5 PM">5 PM</span>
-                    <span class="slot-chip" data-time="8 PM">8 PM</span>
-                    <span class="slot-chip" data-time="10 PM">10 PM</span>
-                  </div>
-                </div>
-                <div class="court-foot">
-                  <a
-                    href="court-details.html"
-                    class="btn btn-accent btn-sm btn-block"
-                    >Book Now</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center mt-5" data-aos="fade-up">
-          <a href="#" class="btn btn-ghost"
-            >View All Courts
-            <span class="material-symbols-rounded">arrow_forward</span></a
-          >
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== News & Tournaments ===================== -->
-    <section class="section" id="news" style="background: var(--bg-secondary)">
-      <div class="container">
-        <div class="section-head" data-aos="fade-up">
-          <div>
-            <span class="eyebrow">News &amp; Tournaments</span>
-            <h2 class="section-title mt-3">What's happening on the courts</h2>
-          </div>
-          <p class="section-sub">
-            Tournament announcements, club updates, and court news from across
-            Mansoura — posted the moment they happen.
-          </p>
-        </div>
-
-        <div class="row g-4">
-          <!-- Featured story -->
-          <div class="col-lg-7" data-aos="fade-up">
-            <div class="news-featured">
-              <a href="./news-details.html" class="more-details"
-                >More Details</a
-              >
-              <img
-                data-fallback
-                src="https://images.unsplash.com/photo-1622163642998-1ea32b0bbc67?auto=format&fit=crop&w=1200&q=80"
-                alt="Mansoura Open 2026 tournament announcement"
-              />
-              <div class="news-featured-content">
-                <span class="news-tag news-tag-tournament">Tournament</span>
-                <h3>Mansoura Open 2026: 32 Teams, One Champion</h3>
-                <p>
-                  Registration is open for the city's biggest amateur padel
-                  tournament, hosted at Padel Arena Mansoura this July.
-                </p>
-                <span class="news-date"
-                  ><span class="material-symbols-rounded">calendar_month</span>
-                  June 28, 2026</span
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- News list -->
-          <div class="col-lg-5 d-flex flex-column gap-3">
-            <a
-              href="#"
-              class="news-item"
-              data-aos="fade-up"
-              data-aos-delay="80"
-            >
-              <img
-                data-fallback
-                src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=300&q=80"
-                alt="Velocity Padel new courts"
-              />
-              <div class="news-item-content">
-                <span class="news-tag news-tag-announcement">Announcement</span>
-                <h4>Velocity Padel adds 3 new indoor courts</h4>
-                <span class="news-date">June 18, 2026</span>
-              </div>
-            </a>
-
-            <a
-              href="#"
-              class="news-item"
-              data-aos="fade-up"
-              data-aos-delay="140"
-            >
-              <img
-                data-fallback
-                src="https://images.unsplash.com/photo-1599058917765-a780eda07a3e?auto=format&fit=crop&w=300&q=80"
-                alt="Smash Point resurfacing"
-              />
-              <div class="news-item-content">
-                <span class="news-tag news-tag-maintenance">Maintenance</span>
-                <h4>Smash Point closed for resurfacing, June 23–25</h4>
-                <span class="news-date">June 20, 2026</span>
-              </div>
-            </a>
-
-            <a
-              href="#"
-              class="news-item"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <img
-                data-fallback
-                src="https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?auto=format&fit=crop&w=300&q=80"
-                alt="Ace Club student discount partnership"
-              />
-              <div class="news-item-content">
-                <span class="news-tag news-tag-partnership">Partnership</span>
-                <h4>PadelHub partners with Ace Club for student discounts</h4>
-                <span class="news-date">June 15, 2026</span>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== CTA ===================== -->
-    <section class="section-tight">
-      <div class="container">
-        <div class="cta-band" data-aos="zoom-in">
-          <span class="eyebrow justify-content-center">Ready when you are</span>
-          <h2 class="mt-3">Ready to Play?</h2>
-          <p>
-            Every court in Mansoura, one search away. Find your slot and get on
-            the court today.
-          </p>
-          <a href="#courts" class="btn btn-accent"
-            >Find Your Court
-            <span class="material-symbols-rounded">arrow_forward</span></a
-          >
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== Why Choose PadelHub ===================== -->
-    <section
-      class="section"
-      id="how-it-works"
-      style="background: var(--bg-secondary)"
-    >
-      <div class="container">
-        <div
-          class="text-center mx-auto"
-          style="max-width: 620px"
-          data-aos="fade-up"
-        >
-          <span class="eyebrow justify-content-center">Why PadelHub</span>
+  <!-- ===================== Featured Courts ===================== -->
+  <section class="section" id="courts">
+    <div class="container">
+      <div class="section-head">
+        <div data-aos="fade-up">
+          <span class="eyebrow">Featured Courts</span>
           <h2 class="section-title mt-3">
-            Built to remove every excuse not to play
+            Mansoura's top-rated padel courts
           </h2>
-          <p class="section-sub mx-auto mt-3">
-            From the first search to the final whistle, every step is designed
-            to be faster than calling a club.
+          <p class="section-sub" data-aos="fade-up" data-aos-delay="80">
+            Hand-picked clubs with verified facilities, transparent pricing,
+            and slots that update the moment someone books.
           </p>
         </div>
+        <div class="fade-up">
+          <div class="search-field">
+            <label><span class="material-symbols-rounded">location_on</span>
+              Regon</label>
+            <select>
+              <option>Any area in Mansoura</option>
+              <option>Any area in Domiatt</option>
+              <option>Any area in Gamsa</option>
+              <option>Any area in Ras Elbar</option>
+            </select>
+          </div>
+        </div>
+      </div>
 
-        <div class="row g-4 mt-3">
-          <div class="col-sm-6 col-lg-3" data-aos="fade-up">
-            <div class="feature-card">
-              <span class="icon-circle"
-                ><span class="material-symbols-rounded">bolt</span></span
-              >
-              <h3>Real-Time Availability</h3>
-              <p>
-                Slots update the instant someone books, so you never show up to
-                a court that's already taken.
-              </p>
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up">
+          <div class="court-card">
+            <div class="court-media">
+              <span class="court-badge-live"><span class="pulse-dot"></span> Live</span>
+              <span class="court-rating"><span class="material-symbols-rounded">star</span> 4.9</span>
+              <img data-fallback
+                src="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=900&q=80"
+                alt="Padel Arena Mansoura court" />
+              <span class="court-price-tag">150 EGP <span>/ hour</span></span>
+            </div>
+            <div class="court-body">
+              <h3 class="court-name">Padel Arena Mansoura</h3>
+              <span class="court-loc"><span class="material-symbols-rounded">location_on</span> El
+                Mashaya, Mansoura</span>
+              <div class="court-stats">
+                <div class="stat"><b>12</b><span>Courts</span></div>
+                <div class="stat"><b>4.9</b><span>Rating</span></div>
+                <div class="stat"><b>2.1k</b><span>Bookings</span></div>
+              </div>
+              <div>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span style="
+                        font-size: 0.78rem;
+                        color: var(--text-faint);
+                        text-transform: uppercase;
+                        letter-spacing: 0.05em;
+                      ">Available today</span>
+                  <span style="font-size: 0.72rem; color: var(--text-faint)" data-live-updated data-seconds="2">Updated
+                    2s ago</span>
+                </div>
+                <div class="slot-row">
+                  <span class="slot-chip" data-time="5 PM">5 PM</span>
+                  <span class="slot-chip" data-time="6 PM">6 PM</span>
+                  <span class="slot-chip" data-time="8 PM">8 PM</span>
+                  <span class="slot-chip" data-time="9 PM">9 PM</span>
+                </div>
+              </div>
+              <div class="court-foot">
+                <a href="./court-details.html" class="btn btn-accent btn-sm btn-block">Book Now</a>
+              </div>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="80">
-            <div class="feature-card">
-              <span class="icon-circle"
-                ><span class="material-symbols-rounded">flash_on</span></span
-              >
-              <h3>Instant Booking</h3>
-              <p>
-                Pick a slot and lock it in immediately — no phone calls, no
-                waiting on a reply from the club.
-              </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+          <div class="court-card">
+            <div class="court-media">
+              <span class="court-badge-live"><span class="pulse-dot"></span> Live</span>
+              <span class="court-rating"><span class="material-symbols-rounded">star</span> 4.8</span>
+              <img data-fallback
+                src="https://images.unsplash.com/photo-1599058917765-a780eda07a3e?auto=format&fit=crop&w=900&q=80"
+                alt="Smash Point court" />
+              <span class="court-price-tag">130 EGP <span>/ hour</span></span>
+            </div>
+            <div class="court-body">
+              <h3 class="court-name">Smash Point</h3>
+              <span class="court-loc"><span class="material-symbols-rounded">location_on</span>
+                Tawreed, Mansoura</span>
+              <div class="court-stats">
+                <div class="stat"><b>8</b><span>Courts</span></div>
+                <div class="stat"><b>4.8</b><span>Rating</span></div>
+                <div class="stat"><b>1.4k</b><span>Bookings</span></div>
+              </div>
+              <div>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span style="
+                        font-size: 0.78rem;
+                        color: var(--text-faint);
+                        text-transform: uppercase;
+                        letter-spacing: 0.05em;
+                      ">Available today</span>
+                  <span style="font-size: 0.72rem; color: var(--text-faint)" data-live-updated data-seconds="6">Updated
+                    6s ago</span>
+                </div>
+                <div class="slot-row">
+                  <span class="slot-chip" data-time="4 PM">4 PM</span>
+                  <span class="slot-chip is-taken" data-time="6 PM">6 PM</span>
+                  <span class="slot-chip" data-time="7 PM">7 PM</span>
+                  <span class="slot-chip" data-time="10 PM">10 PM</span>
+                </div>
+              </div>
+              <div class="court-foot">
+                <a href="court-details.html" class="btn btn-accent btn-sm btn-block">Book Now</a>
+              </div>
             </div>
           </div>
-          <div
-            class="col-sm-6 col-lg-3"
-            data-aos="fade-up"
-            data-aos-delay="160"
-          >
-            <div class="feature-card">
-              <span class="icon-circle"
-                ><span class="material-symbols-rounded">encrypted</span></span
-              >
-              <h3>Secure Payments</h3>
-              <p>
-                Pay online through encrypted checkout, with confirmation sent
-                straight to your phone.
-              </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+          <div class="court-card">
+            <div class="court-media">
+              <span class="court-badge-live"><span class="pulse-dot"></span> Live</span>
+              <span class="court-rating"><span class="material-symbols-rounded">star</span> 4.7</span>
+              <img data-fallback
+                src="https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?auto=format&fit=crop&w=900&q=80"
+                alt="Ace Club Mansoura court" />
+              <span class="court-price-tag">120 EGP <span>/ hour</span></span>
+            </div>
+            <div class="court-body">
+              <h3 class="court-name">Ace Club</h3>
+              <span class="court-loc"><span class="material-symbols-rounded">location_on</span> 60
+                Street, Mansoura</span>
+              <div class="court-stats">
+                <div class="stat"><b>6</b><span>Courts</span></div>
+                <div class="stat"><b>4.7</b><span>Rating</span></div>
+                <div class="stat"><b>980</b><span>Bookings</span></div>
+              </div>
+              <div>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span style="
+                        font-size: 0.78rem;
+                        color: var(--text-faint);
+                        text-transform: uppercase;
+                        letter-spacing: 0.05em;
+                      ">Available today</span>
+                  <span style="font-size: 0.72rem; color: var(--text-faint)" data-live-updated data-seconds="11">Updated
+                    11s ago</span>
+                </div>
+                <div class="slot-row">
+                  <span class="slot-chip" data-time="3 PM">3 PM</span>
+                  <span class="slot-chip" data-time="5 PM">5 PM</span>
+                  <span class="slot-chip is-taken" data-time="8 PM">8 PM</span>
+                  <span class="slot-chip" data-time="9 PM">9 PM</span>
+                </div>
+              </div>
+              <div class="court-foot">
+                <a href="court-details.html" class="btn btn-accent btn-sm btn-block">Book Now</a>
+              </div>
             </div>
           </div>
-          <div
-            class="col-sm-6 col-lg-3"
-            data-aos="fade-up"
-            data-aos-delay="240"
-          >
-            <div class="feature-card">
-              <span class="icon-circle"
-                ><span class="material-symbols-rounded"
-                  >verified_user</span
-                ></span
-              >
-              <h3>Verified Courts</h3>
-              <p>
-                Every club on PadelHub is visited and verified, so the photos
-                always match the place you walk into.
-              </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up">
+          <div class="court-card">
+            <div class="court-media">
+              <span class="court-badge-live"><span class="pulse-dot"></span> Live</span>
+              <span class="court-rating"><span class="material-symbols-rounded">star</span> 4.9</span>
+              <img data-fallback
+                src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=900&q=80"
+                alt="Velocity Padel court" />
+              <span class="court-price-tag">160 EGP <span>/ hour</span></span>
+            </div>
+            <div class="court-body">
+              <h3 class="court-name">Velocity Padel</h3>
+              <span class="court-loc"><span class="material-symbols-rounded">location_on</span>
+                Toriel, Mansoura</span>
+              <div class="court-stats">
+                <div class="stat"><b>10</b><span>Courts</span></div>
+                <div class="stat"><b>4.9</b><span>Rating</span></div>
+                <div class="stat"><b>3.0k</b><span>Bookings</span></div>
+              </div>
+              <div>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span style="
+                        font-size: 0.78rem;
+                        color: var(--text-faint);
+                        text-transform: uppercase;
+                        letter-spacing: 0.05em;
+                      ">Available today</span>
+                  <span style="font-size: 0.72rem; color: var(--text-faint)" data-live-updated data-seconds="0">Updated
+                    just now</span>
+                </div>
+                <div class="slot-row">
+                  <span class="slot-chip" data-time="2 PM">2 PM</span>
+                  <span class="slot-chip" data-time="6 PM">6 PM</span>
+                  <span class="slot-chip" data-time="7 PM">7 PM</span>
+                  <span class="slot-chip" data-time="11 PM">11 PM</span>
+                </div>
+              </div>
+              <div class="court-foot">
+                <a href="court-details.html" class="btn btn-accent btn-sm btn-block">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+          <div class="court-card">
+            <div class="court-media">
+              <span class="court-badge-live"><span class="pulse-dot"></span> Live</span>
+              <span class="court-rating"><span class="material-symbols-rounded">star</span> 4.6</span>
+              <img data-fallback
+                src="https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&w=900&q=80"
+                alt="The Court House padel" />
+              <span class="court-price-tag">110 EGP <span>/ hour</span></span>
+            </div>
+            <div class="court-body">
+              <h3 class="court-name">The Court House</h3>
+              <span class="court-loc"><span class="material-symbols-rounded">location_on</span>
+                Gomhouria St., Mansoura</span>
+              <div class="court-stats">
+                <div class="stat"><b>5</b><span>Courts</span></div>
+                <div class="stat"><b>4.6</b><span>Rating</span></div>
+                <div class="stat"><b>760</b><span>Bookings</span></div>
+              </div>
+              <div>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span style="
+                        font-size: 0.78rem;
+                        color: var(--text-faint);
+                        text-transform: uppercase;
+                        letter-spacing: 0.05em;
+                      ">Available today</span>
+                  <span style="font-size: 0.72rem; color: var(--text-faint)" data-live-updated data-seconds="4">Updated
+                    4s ago</span>
+                </div>
+                <div class="slot-row">
+                  <span class="slot-chip" data-time="1 PM">1 PM</span>
+                  <span class="slot-chip" data-time="4 PM">4 PM</span>
+                  <span class="slot-chip" data-time="9 PM">9 PM</span>
+                  <span class="slot-chip is-taken" data-time="10 PM">10 PM</span>
+                </div>
+              </div>
+              <div class="court-foot">
+                <a href="court-details.html" class="btn btn-accent btn-sm btn-block">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+          <div class="court-card">
+            <div class="court-media">
+              <span class="court-badge-live"><span class="pulse-dot"></span> Live</span>
+              <span class="court-rating"><span class="material-symbols-rounded">star</span> 4.8</span>
+              <img data-fallback
+                src="https://images.unsplash.com/photo-1542144582-1ba00456b5e3?auto=format&fit=crop&w=900&q=80"
+                alt="Net Zone Padel court" />
+              <span class="court-price-tag">140 EGP <span>/ hour</span></span>
+            </div>
+            <div class="court-body">
+              <h3 class="court-name">Net Zone Padel</h3>
+              <span class="court-loc"><span class="material-symbols-rounded">location_on</span> El
+                Mashaya, Mansoura</span>
+              <div class="court-stats">
+                <div class="stat"><b>7</b><span>Courts</span></div>
+                <div class="stat"><b>4.8</b><span>Rating</span></div>
+                <div class="stat"><b>1.1k</b><span>Bookings</span></div>
+              </div>
+              <div>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span style="
+                        font-size: 0.78rem;
+                        color: var(--text-faint);
+                        text-transform: uppercase;
+                        letter-spacing: 0.05em;
+                      ">Available today</span>
+                  <span style="font-size: 0.72rem; color: var(--text-faint)" data-live-updated data-seconds="8">Updated
+                    8s ago</span>
+                </div>
+                <div class="slot-row">
+                  <span class="slot-chip" data-time="3 PM">3 PM</span>
+                  <span class="slot-chip" data-time="5 PM">5 PM</span>
+                  <span class="slot-chip" data-time="8 PM">8 PM</span>
+                  <span class="slot-chip" data-time="10 PM">10 PM</span>
+                </div>
+              </div>
+              <div class="court-foot">
+                <a href="court-details.html" class="btn btn-accent btn-sm btn-block">Book Now</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- ===================== Footer ===================== -->
-    <footer class="footer" id="contact">
-      <div class="container">
-        <div class="row g-4">
-          <div class="col-lg-4 footer-brand" id="about">
-            <a href="index.html" class="brand"
-              ><span class="dot"></span> PadelHub</a
-            >
+      <div class="text-center mt-5" data-aos="fade-up">
+        <a href="./courts.html" class="btn btn-ghost">View All Courts
+          <span class="material-symbols-rounded">arrow_forward</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== News & Tournaments ===================== -->
+  <section class="section" id="news" style="background: var(--bg-secondary)">
+    <div class="container">
+      <div class="section-head" data-aos="fade-up">
+        <div>
+          <span class="eyebrow">News &amp; Tournaments</span>
+          <h2 class="section-title mt-3">What's happening on the courts</h2>
+        </div>
+        <p class="section-sub">
+          Tournament announcements, club updates, and court news from across
+          Mansoura — posted the moment they happen.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Featured story -->
+        <div class="col-lg-7" data-aos="fade-up">
+          <div class="news-featured">
+            <a href="./news-details.html" class="more-details">More Details</a>
+            <img data-fallback
+              src="https://images.unsplash.com/photo-1622163642998-1ea32b0bbc67?auto=format&fit=crop&w=1200&q=80"
+              alt="Mansoura Open 2026 tournament announcement" />
+            <div class="news-featured-content">
+              <span class="news-tag news-tag-tournament">Tournament</span>
+              <h3>Mansoura Open 2026: 32 Teams, One Champion</h3>
+              <p>
+                Registration is open for the city's biggest amateur padel
+                tournament, hosted at Padel Arena Mansoura this July.
+              </p>
+              <span class="news-date"><span class="material-symbols-rounded">calendar_month</span>
+                June 28, 2026</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- News list -->
+        <div class="col-lg-5 d-flex flex-column gap-3">
+          <a href="#" class="news-item" data-aos="fade-up" data-aos-delay="80">
+            <img data-fallback
+              src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=300&q=80"
+              alt="Velocity Padel new courts" />
+            <div class="news-item-content">
+              <span class="news-tag news-tag-announcement">Announcement</span>
+              <h4>Velocity Padel adds 3 new indoor courts</h4>
+              <span class="news-date">June 18, 2026</span>
+            </div>
+          </a>
+
+          <a href="#" class="news-item" data-aos="fade-up" data-aos-delay="140">
+            <img data-fallback
+              src="https://images.unsplash.com/photo-1599058917765-a780eda07a3e?auto=format&fit=crop&w=300&q=80"
+              alt="Smash Point resurfacing" />
+            <div class="news-item-content">
+              <span class="news-tag news-tag-maintenance">Maintenance</span>
+              <h4>Smash Point closed for resurfacing, June 23–25</h4>
+              <span class="news-date">June 20, 2026</span>
+            </div>
+          </a>
+
+          <a href="#" class="news-item" data-aos="fade-up" data-aos-delay="200">
+            <img data-fallback
+              src="https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?auto=format&fit=crop&w=300&q=80"
+              alt="Ace Club student discount partnership" />
+            <div class="news-item-content">
+              <span class="news-tag news-tag-partnership">Partnership</span>
+              <h4>YallPadel partners with Ace Club for student discounts</h4>
+              <span class="news-date">June 15, 2026</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="text-center mt-5" data-aos="fade-up">
+        <a href="./news.html" class="btn btn-ghost">View All News
+          <span class="material-symbols-rounded">arrow_forward</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section class="section-tight">
+    <div class="container">
+      <div class="cta-band" data-aos="zoom-in">
+        <span class="eyebrow justify-content-center">Ready when you are</span>
+        <h2 class="mt-3">Ready to Play?</h2>
+        <p>
+          Every court in Mansoura, one search away. Find your slot and get on
+          the court today.
+        </p>
+        <a href="#courts" class="btn btn-accent">Find Your Court
+          <span class="material-symbols-rounded">arrow_forward</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Why Choose YallPadel ===================== -->
+  <section class="section" id="how-it-works" style="background: var(--bg-secondary)">
+    <div class="container">
+      <div class="text-center mx-auto" style="max-width: 620px" data-aos="fade-up">
+        <span class="eyebrow justify-content-center">Why YallPadel</span>
+        <h2 class="section-title mt-3">
+          Built to remove every excuse not to play
+        </h2>
+        <p class="section-sub mx-auto mt-3">
+          From the first search to the final whistle, every step is designed
+          to be faster than calling a club.
+        </p>
+      </div>
+
+      <div class="row g-4 mt-3">
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up">
+          <div class="feature-card">
+            <span class="icon-circle"><span class="material-symbols-rounded">bolt</span></span>
+            <h3>Real-Time Availability</h3>
             <p>
-              The fastest way to find and book a padel court in Mansoura —
-              real-time slots, verified clubs, secure payment.
+              Slots update the instant someone books, so you never show up to
+              a court that's already taken.
             </p>
-            <div class="social-row">
-              <a href="#" aria-label="Instagram"
-                ><span class="material-symbols-rounded" style="font-size: 18px"
-                  >photo_camera</span
-                ></a
-              >
-              <a href="#" aria-label="Facebook"
-                ><span class="material-symbols-rounded" style="font-size: 18px"
-                  >thumb_up</span
-                ></a
-              >
-              <a href="#" aria-label="WhatsApp"
-                ><span class="material-symbols-rounded" style="font-size: 18px"
-                  >chat</span
-                ></a
-              >
-            </div>
-          </div>
-
-          <div class="col-6 col-lg-2 footer-col">
-            <h4>Platform</h4>
-            <a href="./">Home</a>
-            <a href="#courts">Courts</a>
-            <a href="#how-it-works">How It Works</a>
-            <a href="#">About</a>
-          </div>
-
-          <div class="col-6 col-lg-2 footer-col">
-            <h4>Support</h4>
-            <a href="#">Help Center</a>
-            <a href="#">Cancellations</a>
-            <a href="#">For Court Owners</a>
-            <a href="#">Terms & Privacy</a>
-          </div>
-
-          <div class="col-lg-4 footer-col">
-            <h4>Contact</h4>
-            <ul class="footer-contact">
-              <li>
-                <a
-                  href="https://maps.google.com/?q=El+Mashaya+Mansoura+Dakahlia+Egypt"
-                  target="_blank"
-                >
-                  <span class="material-symbols-rounded">location_on</span>
-                  El Mashaya, Mansoura, Dakahlia, Egypt
-                </a>
-              </li>
-
-              <li>
-                <a href="tel:+201065801252">
-                  <span class="material-symbols-rounded">call</span>
-                  +20 1065801252
-                </a>
-              </li>
-
-              <li>
-                <a href="mailto:Enour1847@gmail.com">
-                  <span class="material-symbols-rounded">mail</span>
-                  Enour1847@gmail.com
-                </a>
-              </li>
-            </ul>
           </div>
         </div>
-
-        <div class="footer-bottom">
-          <span>© 2026 PadelHub. All rights reserved.</span>
-          <span
-            ><a href="#">Terms of Service</a> ·
-            <a href="#">Privacy Policy</a></span
-          >
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="80">
+          <div class="feature-card">
+            <span class="icon-circle"><span class="material-symbols-rounded">flash_on</span></span>
+            <h3>Instant Booking</h3>
+            <p>
+              Pick a slot and lock it in immediately — no phone calls, no
+              waiting on a reply from the club.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="160">
+          <div class="feature-card">
+            <span class="icon-circle"><span class="material-symbols-rounded">encrypted</span></span>
+            <h3>Secure Payments</h3>
+            <p>
+              Pay online through encrypted checkout, with confirmation sent
+              straight to your phone.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
+          <div class="feature-card">
+            <span class="icon-circle"><span class="material-symbols-rounded">verified_user</span></span>
+            <h3>Verified Courts</h3>
+            <p>
+              Every club on YallPadel is visited and verified, so the photos
+              always match the place you walk into.
+            </p>
+          </div>
         </div>
       </div>
-    </footer>
+    </div>
+  </section>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-    <script src="./js/main.js"></script>
-  </body>
+  <!-- ===================== Footer ===================== -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 footer-brand" id="about">
+          <a href="./" class="brand">
+            <img src="./assets/imgs/logo-removebg.png" alt="">
+          </a>
+          <p>
+            The fastest way to find and book a padel court in Mansoura —
+            real-time slots, verified clubs, secure payment.
+          </p>
+          <div class="social-row">
+            <a href="https://instagram.com/NourElshahawy" target="_blank" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="https://facebook.com/NourElshahawy" target="_blank" aria-label="Facebook">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+
+            <a href="https://wa.me/201065801252" target="_blank" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2 footer-col">
+          <h4>Platform</h4>
+          <a href="./">Home</a>
+          <a href="#courts">Book a Court</a>
+          <a href="#news">Padel News</a>
+        </div>
+
+        <div class="col-6 col-lg-2 footer-col">
+          <h4>Support</h4>
+          <a href="#">Help Center</a>
+          <a href="#">Cancellations</a>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#ownerModal">For Court Owners</a>
+          <a href="#">Terms & Privacy</a>
+        </div>
+
+        <div class="col-lg-4 footer-col">
+          <h4>Contact</h4>
+          <ul class="footer-contact">
+            <li>
+              <a href="https://maps.google.com/?q=El+Mashaya+Mansoura+Dakahlia+Egypt" target="_blank">
+                <span class="material-symbols-rounded">location_on</span>
+                El Mashaya, Mansoura, Dakahlia, Egypt
+              </a>
+            </li>
+
+            <li>
+              <a href="tel:+201065801252">
+                <span class="material-symbols-rounded">call</span>
+                +20 1065801252
+              </a>
+            </li>
+
+            <li>
+              <a href="mailto:Enour1847@gmail.com">
+                <span class="material-symbols-rounded">mail</span>
+                Enour1847@gmail.com
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 YallPadel. All rights reserved.</span>
+        <span><a href="#">Terms of Service</a> ·
+          <a href="#">Privacy Policy</a></span>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ===================== Court Owner Modal ===================== -->
+  <div class="modal fade" id="ownerModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content owner-modal-content">
+        <button type="button" class="btn-close-ph" data-bs-dismiss="modal" aria-label="Close">
+          <span class="material-symbols-rounded">close</span>
+        </button>
+
+        <div class="owner-modal-body">
+          <span class="icon-circle owner-modal-icon"><span class="material-symbols-rounded">storefront</span></span>
+          <span class="eyebrow">For Court Owners</span>
+          <h3 class="mt-2">Fill your empty hours. List your court on YallPadel.</h3>
+          <p class="owner-modal-sub">Thousands of players in Mansoura are searching for a court right now — leave your
+            details and our team will call you within 24 hours to get you listed.</p>
+
+          <form class="owner-form" id="ownerForm">
+            <div class="field-group">
+              <label for="ownerName">Your Name</label>
+              <div class="field-input-wrap">
+                <span class="material-symbols-rounded field-icon">person</span>
+                <input class="field-input" type="text" id="ownerName" placeholder="Full name" required>
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="ownerPhone">Phone Number</label>
+              <div class="field-input-wrap">
+                <span class="material-symbols-rounded field-icon">call</span>
+                <input class="field-input" type="tel" id="ownerPhone" placeholder="01xx xxx xxxx" required>
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="ownerEmail">Email</label>
+              <div class="field-input-wrap">
+                <span class="material-symbols-rounded field-icon">mail</span>
+                <input class="field-input" type="email" id="ownerEmail" placeholder="you@example.com" required>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-accent btn-block">Request a Callback</button>
+          </form>
+
+          <p class="owner-modal-note"><span class="material-symbols-rounded">schedule</span> We typically respond within
+            24 hours.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
 </html>
