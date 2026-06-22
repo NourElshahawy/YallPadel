@@ -86,7 +86,7 @@
       <!-- ===================== Featured image ===================== -->
       <div class="article-hero-image mt-4" data-aos="fade-up">
         <img data-fallback
-          src="https://images.unsplash.com/photo-1622163642998-1ea32b0bbc67?auto=format&fit=crop&w=1600&q=80"
+          src="./assets/imgs/img1.jpg"
           alt="Mansoura Open 2026 tournament">
       </div>
 
@@ -241,6 +241,55 @@
       </div>
     </div>
   </footer>
+
+
+  <!-- ===================== Court Owner Modal ===================== -->
+  <div class="modal fade" id="ownerModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content owner-modal-content">
+        <button type="button" class="btn-close-ph" data-bs-dismiss="modal" aria-label="Close">
+          <span class="material-symbols-rounded">close</span>
+        </button>
+
+        <div class="owner-modal-body">
+          <span class="icon-circle owner-modal-icon"><span class="material-symbols-rounded">storefront</span></span>
+          <span class="eyebrow">For Court Owners</span>
+          <h3 class="mt-2">Fill your empty hours. List your court on YallPadel.</h3>
+          <p class="owner-modal-sub">Thousands of players in Mansoura are searching for a court right now — leave your
+            details and our team will call you within 24 hours to get you listed.</p>
+
+          <form class="owner-form" id="ownerForm">
+            <div class="field-group">
+              <label for="ownerName">Your Name</label>
+              <div class="field-input-wrap">
+                <span class="material-symbols-rounded field-icon">person</span>
+                <input class="field-input" type="text" id="ownerName" placeholder="Full name" required>
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="ownerPhone">Phone Number</label>
+              <div class="field-input-wrap">
+                <span class="material-symbols-rounded field-icon">call</span>
+                <input class="field-input" type="tel" id="ownerPhone" placeholder="01xx xxx xxxx" required>
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="ownerEmail">Email</label>
+              <div class="field-input-wrap">
+                <span class="material-symbols-rounded field-icon">mail</span>
+                <input class="field-input" type="email" id="ownerEmail" placeholder="you@example.com" required>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-accent btn-block">Request a Callback</button>
+          </form>
+
+          <p class="owner-modal-note"><span class="material-symbols-rounded">schedule</span> We typically respond within
+            24 hours.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

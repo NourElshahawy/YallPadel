@@ -362,10 +362,10 @@ button {
   align-items: center;
   justify-content: center;
 }
-.nav-toggle span{
+.nav-toggle span {
   position: absolute;
 }
-.nav-links .logo-mobil{
+.nav-links .logo-mobil {
   display: none;
 }
 @media (max-width: 991px) {
@@ -385,9 +385,9 @@ button {
     height: 100vh;
     justify-content: center;
   }
-    .nav-links .logo-mobil {
-      display: block;
-    }
+  .nav-links .logo-mobil {
+    display: block;
+  }
 
   .nav-links.is-open {
     transform: translateX(0);
@@ -412,21 +412,26 @@ button {
   padding-bottom: 170px;
   overflow: hidden;
   background:
-    linear-gradient(180deg,
+    linear-gradient(
+      180deg,
       rgba(11, 16, 32, 0.55) 0%,
       rgba(11, 16, 32, 0.78) 55%,
-      var(--bg-primary) 100%),
+      var(--bg-primary) 100%
+    ),
     linear-gradient(120deg, rgba(11, 16, 32, 0.92), rgba(11, 16, 32, 0.55)),
-    url("https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=2000&q=80") center/cover no-repeat;
+    url("https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=2000&q=80")
+      center/cover no-repeat;
 }
 
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 18% 20%,
-      var(--accent-glow),
-      transparent 40%);
+  background: radial-gradient(
+    circle at 18% 20%,
+    var(--accent-glow),
+    transparent 40%
+  );
   opacity: 0.25;
   pointer-events: none;
 }
@@ -479,7 +484,6 @@ button {
 }
 
 @keyframes floatY {
-
   0%,
   100% {
     transform: translateY(0);
@@ -709,9 +713,11 @@ button {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg,
-      transparent 50%,
-      rgba(11, 16, 32, 0.85) 100%);
+  background: linear-gradient(
+    180deg,
+    transparent 50%,
+    rgba(11, 16, 32, 0.85) 100%
+  );
 }
 
 .court-badge-live {
@@ -870,7 +876,7 @@ button {
 }
 
 .slot-chip.is-leaving {
-  opacity: 0;
+  /* opacity: 0; */
   transform: scale(0.7);
 }
 
@@ -961,12 +967,16 @@ button {
   padding: 80px 40px;
   text-align: center;
   background:
-    radial-gradient(circle at 30% 20%,
+    radial-gradient(
+      circle at 30% 20%,
       rgba(0, 214, 143, 0.22),
-      transparent 55%),
-    radial-gradient(circle at 80% 80%,
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
       rgba(0, 214, 143, 0.14),
-      transparent 50%),
+      transparent 50%
+    ),
     var(--bg-secondary);
   border: 1px solid var(--border-glass);
 }
@@ -1038,7 +1048,7 @@ button {
 }
 
 .social-row a {
-    font-size: 22px;
+  font-size: 22px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -1059,7 +1069,6 @@ button {
   color: #04140e;
   transform: translateY(-3px);
 }
-
 
 .footer-bottom {
   margin-top: 50px;
@@ -1116,7 +1125,7 @@ button {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
-.gallery-thumbs .swiper-wrapper{
+.gallery-thumbs .swiper-wrapper {
   display: flex;
 }
 
@@ -1212,17 +1221,19 @@ button {
 
 .info-card h3 {
   font-size: 1.15rem;
-  margin-bottom: 18px;
+  margin: 18px 0;
   color: var(--white);
 }
 
 .amenity-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 16px;
 }
 
 .amenity-item {
+  /* width: stretch; */
   display: flex;
   align-items: center;
   gap: 12px;
@@ -1249,9 +1260,11 @@ button {
   border: 1px solid var(--border-glass);
   aspect-ratio: 16/9;
   position: relative;
-  background: linear-gradient(135deg,
-      var(--bg-elevated) 0%,
-      var(--bg-secondary) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--bg-elevated) 0%,
+    var(--bg-secondary) 100%
+  );
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1288,6 +1301,152 @@ button {
   animation: pulseRing 2s ease-out infinite;
 }
 
+/* ===================== Court Selector ===================== */
+.court-selector {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.court-pill {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 10px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--r-md);
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s var(--ease);
+  position: relative;
+  overflow: hidden;
+}
+.court-pill::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--accent-soft);
+  opacity: 0;
+  transition: opacity 0.3s var(--ease);
+}
+.court-pill:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+.court-pill:hover::before {
+  opacity: 1;
+}
+.court-pill.is-active {
+  border-color: var(--accent);
+  background: var(--bg-elevated-2);
+  box-shadow:
+    0 0 0 1px var(--accent),
+    var(--shadow-glow);
+}
+.court-pill.is-active::before {
+  opacity: 1;
+}
+.court-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.court-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease);
+}
+.court-pill:hover .court-img img {
+  transform: scale(1.07);
+}
+
+.court-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(11, 16, 32, 0.08) 0%,
+    rgba(11, 16, 32, 0.55) 50%,
+    rgba(11, 16, 32, 0.9) 100%
+  );
+}
+
+.court-pill-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.court-pill-name {
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--white);
+}
+.court-pill-type {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.court-pill-status {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--r-pill);
+  letter-spacing: 0.03em;
+  backdrop-filter: blur(6px);
+}
+.court-pill-status.available {
+  background: rgba(0, 214, 143, 0.2);
+  color: var(--accent);
+  border: 1px solid rgba(0, 214, 143, 0.3);
+}
+.court-pill-status.busy {
+  background: rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Busy court مش ممكن تختاره */
+.court-pill:has(.busy) {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.court-pill:has(.busy):hover {
+  transform: none;
+  border-color: var(--border-glass);
+}
+.court-pill:has(.busy)::before {
+  display: none;
+}
+
+@media (max-width: 575px) {
+  .court-selector {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .amenity-item {
+    width: stretch;
+  }
+}
+
 /* Calendar / slots */
 .date-strip {
   display: flex;
@@ -1305,6 +1464,7 @@ button {
   flex: 0 0 auto;
   width: 64px;
   padding: 12px 0;
+  margin: 12px 0;
   text-align: center;
   border-radius: var(--r-md);
   border: 1px solid var(--border-glass);
@@ -1388,7 +1548,7 @@ button {
 }
 
 .btn.disabled {
-  opacity: .45;
+  opacity: 0.45;
   pointer-events: none;
   cursor: not-allowed;
 }
@@ -1754,7 +1914,7 @@ button {
   font-size: 14px;
   font-weight: 600;
 
-  box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   z-index: 3;
 }
 
@@ -1775,9 +1935,11 @@ button {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg,
-      rgba(11, 16, 32, 0.1) 30%,
-      rgba(11, 16, 32, 0.95) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(11, 16, 32, 0.1) 30%,
+    rgba(11, 16, 32, 0.95) 100%
+  );
 }
 
 .news-featured-content {
@@ -1913,20 +2075,20 @@ button {
   color: var(--white);
   padding: 9px 16px;
   border-radius: var(--r-pill);
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  transition: all .3s var(--ease);
+  transition: all 0.3s var(--ease);
 }
 
 .more-details::after {
-  content: '→';
-  transition: transform .3s var(--ease);
+  content: "→";
+  transition: transform 0.3s var(--ease);
 }
 
 .more-details:hover {
   background: var(--accent);
   border-color: var(--accent);
-  color: #04140E;
+  color: #04140e;
 }
 
 .more-details:hover::after {
@@ -1982,7 +2144,7 @@ button {
 
 .news-feature-info p {
   color: var(--text-muted);
-  font-size: .96rem;
+  font-size: 0.96rem;
 }
 
 .news-filter-row {
@@ -1997,7 +2159,10 @@ button {
   height: 100%;
   display: flex;
   flex-direction: column;
-  transition: transform .4s var(--ease), border-color .4s var(--ease), box-shadow .4s var(--ease);
+  transition:
+    transform 0.4s var(--ease),
+    border-color 0.4s var(--ease),
+    box-shadow 0.4s var(--ease);
 }
 
 .news-card:hover {
@@ -2016,7 +2181,7 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform .6s var(--ease);
+  transition: transform 0.6s var(--ease);
 }
 
 .news-card:hover .news-card-media img {
@@ -2045,7 +2210,7 @@ button {
 }
 
 .news-card-excerpt {
-  font-size: .88rem;
+  font-size: 0.88rem;
   color: var(--text-muted);
   line-height: 1.6;
 }
@@ -2063,14 +2228,14 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  font-size: .84rem;
+  font-size: 0.84rem;
   font-weight: 700;
   color: var(--accent);
 }
 
 .read-more-link .material-symbols-rounded {
   font-size: 16px;
-  transition: transform .3s var(--ease);
+  transition: transform 0.3s var(--ease);
 }
 
 .news-card:hover .read-more-link .material-symbols-rounded {
@@ -2146,9 +2311,11 @@ button {
 /* ===================== Misc / Reveal helpers ===================== */
 .img-fallback {
   background:
-    radial-gradient(circle at 30% 20%,
+    radial-gradient(
+      circle at 30% 20%,
       rgba(0, 214, 143, 0.25),
-      transparent 55%),
+      transparent 55%
+    ),
     linear-gradient(135deg, var(--bg-elevated-2), var(--bg-secondary));
 }
 
@@ -2163,10 +2330,9 @@ button {
   transition-timing-function: var(--ease) !important;
 }
 
-
 /* ===================== Court Owner Modal ===================== */
 .modal-backdrop.show {
-  opacity: .75;
+  opacity: 0.75;
   backdrop-filter: blur(2px);
 }
 
@@ -2192,7 +2358,7 @@ button {
   background: var(--glass-fill-light);
   border: 1px solid var(--border-glass);
   color: var(--text-muted);
-  transition: all .3s var(--ease);
+  transition: all 0.3s var(--ease);
 }
 
 .btn-close-ph:hover {
@@ -2223,7 +2389,7 @@ button {
 
 .owner-modal-sub {
   color: var(--text-muted);
-  font-size: .92rem;
+  font-size: 0.92rem;
   margin-bottom: 26px;
 }
 
@@ -2233,7 +2399,7 @@ button {
   justify-content: center;
   gap: 6px;
   text-align: center;
-  font-size: .8rem;
+  font-size: 0.8rem;
   color: var(--text-faint);
   margin-top: 16px;
 }
