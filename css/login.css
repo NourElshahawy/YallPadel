@@ -15,7 +15,10 @@ body.auth-page {
   position: relative;
   flex-direction: column;
   padding: 50px 56px;
-  background: linear-gradient(180deg, rgba(11, 16, 32, 0.4), rgba(11, 16, 32, 0.94)), url(https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=1200&q=80) center / cover no-repeat;
+  background:
+    linear-gradient(180deg, rgba(11, 16, 32, 0.4), rgba(11, 16, 32, 0.94)),
+    url(https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=1200&q=80)
+      center / cover no-repeat;
 }
 
 .auth-visual-content h2 {
@@ -103,6 +106,95 @@ body.auth-page {
   color: var(--text-muted);
   font-size: 0.95rem;
   margin-bottom: 28px;
+}
+
+/* ===================== Account Type Selector (Register) ===================== */
+.account-type-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 26px;
+}
+
+.type-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 14px;
+  border-radius: var(--r-md);
+  border: 1.5px solid var(--border-glass);
+  background: var(--bg-elevated);
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s var(--ease);
+}
+.type-card:hover {
+  border-color: var(--accent);
+  background: var(--bg-elevated-2);
+}
+.type-card.is-active {
+  border-color: var(--accent);
+  background: var(--bg-elevated-2);
+  box-shadow:
+    0 0 0 1px var(--accent),
+    var(--shadow-glow);
+}
+
+.type-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(234, 234, 234, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s var(--ease);
+}
+.type-icon .material-symbols-rounded {
+  font-size: 22px;
+  color: var(--text-muted);
+  transition: color 0.3s var(--ease);
+}
+.type-icon.owner {
+  background: var(--accent-soft);
+}
+.type-icon.owner .material-symbols-rounded {
+  color: var(--accent);
+}
+.type-card.is-active .type-icon {
+  background: var(--accent-soft);
+}
+.type-card.is-active .type-icon .material-symbols-rounded {
+  color: var(--accent);
+}
+
+.type-info b {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+.type-info span {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.type-check {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  color: var(--border-glass-strong);
+  font-variation-settings: "FILL" 0;
+  transition: all 0.3s var(--ease);
+}
+.type-card.is-active .type-check {
+  color: var(--accent);
+  font-variation-settings: "FILL" 1;
 }
 
 .social-btn {

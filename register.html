@@ -93,6 +93,42 @@
             Join YallPadel and book your first court in minutes.
           </p>
 
+          <!-- Account type selector -->
+          <div class="account-type-selector">
+            <div class="type-card is-active" data-type="player">
+              <span class="type-icon">
+                <img src="./assets/imgs/icon-location.png" alt="">
+              </span>
+              <div class="type-info">
+                <b>Player</b>
+                <span>Book courts & manage my reservations</span>
+              </div>
+              <span class="type-check material-symbols-rounded"
+                >check_circle</span
+              >
+            </div>
+
+            <div class="type-card" data-type="owner">
+              <span class="type-icon owner">
+                <img src="./assets/imgs/main-icon.png" alt="">
+              </span>
+              <div class="type-info">
+                <b>Court Owner</b>
+                <span>List my courts & manage bookings</span>
+              </div>
+              <span class="type-check material-symbols-rounded"
+                >check_circle</span
+              >
+            </div>
+          </div>
+
+          <input
+            type="hidden"
+            id="accountType"
+            name="account_type"
+            value="player"
+          />
+
           <button type="button" class="social-btn">
             <span class="material-symbols-rounded" style="font-size: 18px"
               >account_circle</span
