@@ -417,7 +417,7 @@ button {
       rgba(11, 16, 32, 0.78) 55%,
       var(--bg-primary) 100%),
     linear-gradient(120deg, rgba(11, 16, 32, 0.92), rgba(11, 16, 32, 0.55)),
-    url("https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=2000&q=80") center/cover no-repeat;
+    url("../assets/imgs/img1.jpg") center/cover no-repeat;
 }
 
 .hero::before {
