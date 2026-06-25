@@ -320,4 +320,85 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+
+
+
+/* ---- Dismiss email notice ---- */
+  document.getElementById('emailDismiss')?.addEventListener('click', () => {
+    const notice = document.getElementById('emailNotice');
+    notice.style.opacity = '0';
+    notice.style.transform = 'translateY(-8px)';
+    notice.style.transition = 'all .35s ease';
+    setTimeout(() => notice.remove(), 350);
+  });
+
+  /* ---- Copy InstaPay number ---- */
+  const copyBtn = document.getElementById('copyBtn');
+  const numEl   = document.getElementById('instapayNum');
+  copyBtn?.addEventListener('click', () => {
+    navigator.clipboard.writeText(numEl.textContent.trim()).then(() => {
+      const icon = copyBtn.querySelector('.material-symbols-rounded');
+      icon.textContent = 'check';
+      copyBtn.style.background = 'var(--accent)';
+      copyBtn.style.color = '#04140E';
+      setTimeout(() => {
+        icon.textContent = 'content_copy';
+        copyBtn.style.background = '';
+        copyBtn.style.color = '';
+      }, 2000);
+    });
+  });
+
+  /* ---- Hold timer (15 min countdown) ---- */
+  const timerEl = document.getElementById('holdTimer');
+  if (timerEl){
+    let seconds = 15 * 60;
+    const tick = () => {
+      const m = String(Math.floor(seconds / 60)).padStart(2, '0');
+      const s = String(seconds % 60).padStart(2, '0');
+      timerEl.textContent = `${m}:${s}`;
+      if (seconds > 0){ seconds--; setTimeout(tick, 1000); }
+      else { timerEl.textContent = 'Expired'; timerEl.style.color = '#ff6b6b'; }
+    };
+    tick();
+  }
+
+  /* ---- "I've sent the payment" ---- */
+  document.getElementById('markPaidBtn')?.addEventListener('click', () => {
+    // Update tracker step 3
+    const ts3 = document.getElementById('ts3');
+    ts3.classList.remove('is-pending');
+    ts3.classList.add('is-done');
+    ts3.querySelector('.ts-icon .material-symbols-rounded').textContent = 'check_circle';
+
+    document.getElementById('paymentStatusText').textContent = 'Payment submitted — under review';
+    document.getElementById('paymentTime').textContent = 'Today, just now';
+
+    // Hide instapay block, show paid badge
+    document.getElementById('instapayBlock').classList.add('d-none');
+    document.getElementById('paidBadge').classList.remove('d-none');
+
+    // Update summary badge
+    const badge = document.getElementById('summaryPaymentBadge');
+    badge.classList.add('is-paid');
+    badge.innerHTML = `<span class="material-symbols-rounded">verified</span><span>Payment submitted</span>`;
+
+    // Update top status pill
+    const pill = document.querySelector('.status-pill');
+    pill.classList.remove('confirmed');
+    pill.classList.add('paid');
+    pill.innerHTML = `<span class="material-symbols-rounded" style="font-size:16px;">verified</span> Payment Submitted`;
+
+    // Unlock step 4
+    document.getElementById('ts4').classList.remove('is-upcoming');
+    document.getElementById('ts4').classList.add('is-done');
+  });
+
+
+
+
+
+
+
+
 });

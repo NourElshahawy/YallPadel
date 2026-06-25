@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booking Confirmed — YallPadel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/booking-confirmation.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="navbar-ph">
+  <div class="container d-flex align-items-center justify-content-between">
+    <a href="index.html" class="brand"><span class="dot"></span> YallPadel</a>
+    <div class="navbar-cta">
+      <a href="login.html" class="btn btn-ghost btn-sm">Log In</a>
+      <a href="register.html" class="btn btn-accent btn-sm">Register</a>
+    </div>
+  </div>
+</header>
+
+<main class="confirmation-main">
+  <div class="container">
+    <div class="confirmation-grid">
+
+      <!-- ===== Left col ===== -->
+      <div class="confirmation-left">
+
+        <!-- Email notice -->
+        <div class="email-notice" id="emailNotice">
+          <div class="email-icon">
+            <span class="material-symbols-rounded">mark_email_read</span>
+          </div>
+          <div>
+            <b>Confirmation sent to your email</b>
+            <span>ahmed@example.com</span>
+          </div>
+          <button class="email-dismiss" id="emailDismiss" aria-label="Dismiss">
+            <span class="material-symbols-rounded">close</span>
+          </button>
+        </div>
+
+        <!-- Booking ID + status pill -->
+        <div class="booking-header">
+          <div>
+            <p class="booking-id">Booking <b>#YP-20260624-0841</b></p>
+            <h1>You're all set. See you on the court.</h1>
+          </div>
+          <span class="status-pill confirmed">
+            <span class="pulse-dot"></span> Confirmed
+          </span>
+        </div>
+
+        <!-- ===== Tracker ===== -->
+        <div class="tracker-card">
+          <h3>Booking Status</h3>
+
+          <div class="tracker">
+
+            <div class="tracker-step is-done" id="ts1">
+              <div class="ts-icon">
+                <span class="material-symbols-rounded">check_circle</span>
+              </div>
+              <div class="ts-body">
+                <b>Booking Confirmed</b>
+                <span>Your slot is reserved at Padel Arena Mansoura</span>
+                <span class="ts-time">Today, 2:41 PM</span>
+              </div>
+            </div>
+
+            <div class="tracker-step is-done" id="ts2">
+              <div class="ts-icon">
+                <span class="material-symbols-rounded">check_circle</span>
+              </div>
+              <div class="ts-body">
+                <b>Email Sent</b>
+                <span>Confirmation emailed to ahmed@example.com</span>
+                <span class="ts-time">Today, 2:41 PM</span>
+              </div>
+            </div>
+
+            <div class="tracker-step is-pending" id="ts3">
+              <div class="ts-icon">
+                <span class="material-symbols-rounded">payments</span>
+              </div>
+              <div class="ts-body">
+                <b>Payment</b>
+                <span id="paymentStatusText">Awaiting payment via InstaPay</span>
+                <span class="ts-time" id="paymentTime">—</span>
+
+                <!-- InstaPay CTA -->
+                <div class="instapay-block" id="instapayBlock">
+                  <div class="instapay-amount">
+                    <span>Total due</span>
+                    <b>300 EGP</b>
+                  </div>
+                  <div class="instapay-steps">
+                    <div class="instapay-step">
+                      <span class="instapay-num">1</span>
+                      <span>Open your banking app or InstaPay</span>
+                    </div>
+                    <div class="instapay-step">
+                      <span class="instapay-num">2</span>
+                      <span>Send <b>300 EGP</b> to InstaPay number</span>
+                    </div>
+                    <div class="instapay-step">
+                      <span class="instapay-num">3</span>
+                      <span>Use booking ID <b>#YP-20260624-0841</b> as the transfer note</span>
+                    </div>
+                  </div>
+                  <div class="instapay-number-box">
+                    <span class="material-symbols-rounded">smartphone</span>
+                    <div>
+                      <span class="inp-label">InstaPay Number</span>
+                      <b class="inp-num" id="instapayNum">01065801252</b>
+                    </div>
+                    <button class="btn-copy" id="copyBtn" aria-label="Copy number">
+                      <span class="material-symbols-rounded">content_copy</span>
+                    </button>
+                  </div>
+                  <button class="btn btn-accent btn-block" id="markPaidBtn">
+                    I've sent the payment
+                  </button>
+                  <p class="instapay-note">
+                    <span class="material-symbols-rounded">info</span>
+                    Payment is verified manually. Your court is reserved for <b id="holdTimer">15:00</b>.
+                  </p>
+                </div>
+
+                <!-- Paid state (hidden by default) -->
+                <div class="paid-badge d-none" id="paidBadge">
+                  <span class="material-symbols-rounded">verified</span>
+                  Payment submitted — under review
+                </div>
+              </div>
+            </div>
+
+            <div class="tracker-step is-upcoming" id="ts4">
+              <div class="ts-icon">
+                <span class="material-symbols-rounded">sports_tennis</span>
+              </div>
+              <div class="ts-body">
+                <b>Head to the Court</b>
+                <span>Show your booking ID at the entrance</span>
+                <span class="ts-time">Tomorrow, Sun 21 Jun · 5:00 PM</span>
+              </div>
+            </div>
+
+            <div class="tracker-step is-upcoming" id="ts5">
+              <div class="ts-icon">
+                <span class="material-symbols-rounded">trophy</span>
+              </div>
+              <div class="ts-body">
+                <b>Play & Enjoy</b>
+                <span>Court 1 · Regular · 2 hours · Padel Arena Mansoura</span>
+                <span class="ts-time">5:00 PM – 7:00 PM</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Book again CTA -->
+        <div class="book-again-card">
+          <div class="bag-icon">
+            <span class="material-symbols-rounded">add_circle</span>
+          </div>
+          <div class="bag-text">
+            <b>Want to book another session?</b>
+            <span>Browse all available courts and slots across Mansoura.</span>
+          </div>
+          <a href="courts.html" class="btn btn-accent btn-sm">
+            Book Again <span class="material-symbols-rounded">arrow_forward</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- ===== Right col — booking summary ===== -->
+      <div class="confirmation-right">
+        <div class="summary-sticky">
+
+          <div class="summary-venue-img">
+            <img src="./assets/imgs/img1.jpg" alt="Padel Arena Mansoura">
+            <div class="svi-overlay">
+              <span class="court-badge-live" style="position:static;display:inline-flex;">
+                <span class="pulse-dot"></span> Live
+              </span>
+            </div>
+          </div>
+
+          <div class="summary-body">
+            <h3 class="summary-venue-name">Padel Arena Mansoura</h3>
+            <span class="summary-loc">
+              <span class="material-symbols-rounded">location_on</span>
+              El Mashaya, Mansoura
+            </span>
+
+            <div class="summary-rows">
+              <div class="summary-row"><span>Court</span><span>Court 1 · Regular</span></div>
+              <div class="summary-row"><span>Date</span><span>Sun, 21 Jun 2026</span></div>
+              <div class="summary-row"><span>Time</span><span>5 PM, 6 PM</span></div>
+              <div class="summary-row"><span>Duration</span><span>2 hours</span></div>
+            </div>
+
+            <div class="summary-total-row">
+              <span>Total</span>
+              <b>300 EGP</b>
+            </div>
+
+            <div class="payment-status-badge" id="summaryPaymentBadge">
+              <span class="material-symbols-rounded">pending</span>
+              <span>Awaiting payment</span>
+            </div>
+
+            <div class="summary-actions">
+              <a href="#" class="summary-action-btn">
+                <span class="material-symbols-rounded">download</span> Download receipt
+              </a>
+              <a href="#" class="summary-action-btn">
+                <span class="material-symbols-rounded">share</span> Share booking
+              </a>
+              <a href="#" class="summary-action-btn danger">
+                <span class="material-symbols-rounded">cancel</span> Cancel booking
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/booking-confirmation.js"></script>
+</body>
+</html>
