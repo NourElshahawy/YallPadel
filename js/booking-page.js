@@ -50,17 +50,17 @@ document.addEventListener("DOMContentLoaded", () => {
       existing.className = "step-bar";
       existing.innerHTML = `
         <div class="step-item" id="si1">
-          <div class="step-circle">1</div>
+          <div class="step-circle"><span>1</span></div>
           <span>اختر الملعب</span>
         </div>
         <div class="step-line" id="sl1"></div>
         <div class="step-item" id="si2">
-          <div class="step-circle">2</div>
+          <div class="step-circle"><span>2</span></div>
           <span>اختر اليوم</span>
         </div>
         <div class="step-line" id="sl2"></div>
         <div class="step-item" id="si3">
-          <div class="step-circle">3</div>
+          <div class="step-circle"><span>3</span></div>
           <span>اختر الوقت</span>
         </div>
       `;
