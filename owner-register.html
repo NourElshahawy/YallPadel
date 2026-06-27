@@ -43,313 +43,295 @@
     <link rel="stylesheet" href="./css/login.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
+
 <body class="auth-page">
 
-<div class="wizard-shell">
+  <div class="wizard-shell">
 
-  <!-- ===== Side panel ===== -->
-  <div class="wizard-side d-none d-lg-flex">
-    <a href="index.html" class="brand">
+    <!-- ===== اللوحة الجانبية ===== -->
+    <div class="wizard-side d-none d-lg-flex">
+      <a href="index.html" class="brand">
         <img src="./assets/imgs/logo-removebg.png" alt="">
-    </a>
+      </a>
 
-    <div class="wizard-steps-nav">
-      <div class="wnav-item is-active" data-step="1">
-        <span class="wnav-num">1</span>
-        <div class="wnav-label">
-          <b>Venue Info</b>
-          <span>Name, location & contact</span>
+      <div class="wizard-steps-nav">
+        <div class="wnav-item is-active" data-step="1">
+          <span class="wnav-num">1</span>
+          <div class="wnav-label">
+            <b>معلومات المكان</b>
+            <span>الاسم، الموقع، وبيانات الاتصال</span>
+          </div>
+        </div>
+        <div class="wnav-connector"></div>
+        <div class="wnav-item" data-step="2">
+          <span class="wnav-num">2</span>
+          <div class="wnav-label">
+            <b>إعداد الملاعب</b>
+            <span>الأنواع والأسعار لكل ملعب</span>
+          </div>
+        </div>
+        <div class="wnav-connector"></div>
+        <div class="wnav-item" data-step="3">
+          <span class="wnav-num">3</span>
+          <div class="wnav-label">
+            <b>الصور</b>
+            <span>تحميل صور لكل ملعب</span>
+          </div>
+        </div>
+        <div class="wnav-connector"></div>
+        <div class="wnav-item" data-step="4">
+          <span class="wnav-num">4</span>
+          <div class="wnav-label">
+            <b>المرافق</b>
+            <span>المرافق وساعات العمل</span>
+          </div>
+        </div>
+        <div class="wnav-connector"></div>
+        <div class="wnav-item" data-step="5">
+          <span class="wnav-num">5</span>
+          <div class="wnav-label">
+            <b>مراجعة</b>
+            <span>تأكيد وإرسال</span>
+          </div>
         </div>
       </div>
-      <div class="wnav-connector"></div>
-      <div class="wnav-item" data-step="2">
-        <span class="wnav-num">2</span>
-        <div class="wnav-label">
-          <b>Courts Setup</b>
-          <span>Types & pricing per court</span>
-        </div>
-      </div>
-      <div class="wnav-connector"></div>
-      <div class="wnav-item" data-step="3">
-        <span class="wnav-num">3</span>
-        <div class="wnav-label">
-          <b>Photos</b>
-          <span>Upload images for each court</span>
-        </div>
-      </div>
-      <div class="wnav-connector"></div>
-      <div class="wnav-item" data-step="4">
-        <span class="wnav-num">4</span>
-        <div class="wnav-label">
-          <b>Amenities</b>
-          <span>Facilities & operating hours</span>
-        </div>
-      </div>
-      <div class="wnav-connector"></div>
-      <div class="wnav-item" data-step="5">
-        <span class="wnav-num">5</span>
-        <div class="wnav-label">
-          <b>Review</b>
-          <span>Confirm & submit</span>
-        </div>
-      </div>
+
+      <p class="wizard-side-note">
+        <span class="material-symbols-rounded">verified</span>
+        يراجع فريقنا كل طلب خلال 24 ساعة قبل نشره.
+      </p>
     </div>
 
-    <p class="wizard-side-note">
-      <span class="material-symbols-rounded">verified</span>
-      Our team reviews every submission within 24 hours before going live.
-    </p>
-  </div>
+    <!-- ===== لوحة النموذج ===== -->
+    <div class="wizard-form-col">
 
-  <!-- ===== Form panel ===== -->
-  <div class="wizard-form-col">
+      <div class="wizard-topbar d-flex d-lg-none">
+        <a href="index.html" class="brand"><span class="dot"></span> YallPadel</a>
+        <span class="wizard-mobile-step">الخطوة <b id="mobileStepNum">1</b> من 5</span>
+      </div>
 
-    <!-- Mobile top bar -->
-    <div class="wizard-topbar d-flex d-lg-none">
-      <a href="index.html" class="brand"><span class="dot"></span> YallPadel</a>
-      <span class="wizard-mobile-step">Step <b id="mobileStepNum">1</b> of 5</span>
-    </div>
+      <div class="wizard-progress d-lg-none">
+        <div class="wizard-progress-fill" id="progressFill" style="width:20%"></div>
+      </div>
 
-    <!-- Progress bar (mobile) -->
-    <div class="wizard-progress d-lg-none">
-      <div class="wizard-progress-fill" id="progressFill" style="width:20%"></div>
-    </div>
+      <div class="wizard-inner">
 
-    <div class="wizard-inner">
-
-      <!-- ======================================
-           STEP 1 — Venue Info
-      ======================================= -->
-      <div class="wizard-step is-active" id="step1">
-        <div class="step-header">
-          <span class="eyebrow">Step 1 of 5</span>
-          <h2 class="mt-2">Tell us about your venue</h2>
-          <p>Basic information players will see when they find your club on YallPadel.</p>
-        </div>
-
-        <div class="field-group">
-          <label for="venueName">Venue Name</label>
-          <div class="field-input-wrap">
-            <span class="material-symbols-rounded field-icon">storefront</span>
-            <input class="field-input" type="text" id="venueName" placeholder="e.g. Padel Arena Mansoura" required>
+        <div class="wizard-step is-active" id="step1">
+          <div class="step-header">
+            <span class="eyebrow">الخطوة 1 من 5</span>
+            <h2 class="mt-2">أخبرنا عن مكانك</h2>
+            <p>المعلومات الأساسية التي سيراها اللاعبون عند العثور على ناديك في YallPadel.</p>
           </div>
-        </div>
 
-        <div class="field-group">
-          <label for="venueArea">Area / Neighbourhood</label>
-          <div class="field-input-wrap">
-            <span class="material-symbols-rounded field-icon">location_on</span>
-            <select class="field-input" id="venueArea" required>
-              <option value="">Select area in Mansoura</option>
-              <option>El Mashaya</option>
-              <option>Tawreed</option>
-              <option>60 Street (El Setteen)</option>
-              <option>Toriel</option>
-              <option>Gomhouria Street</option>
-              <option>Other</option>
-            </select>
+          <div class="field-group">
+            <label for="venueName">اسم المكان</label>
+            <div class="field-input-wrap">
+              <span class="material-symbols-rounded field-icon">storefront</span>
+              <input class="field-input" type="text" id="venueName" placeholder="مثال: بادل أرينا المنصورة" required>
+            </div>
           </div>
-        </div>
 
-        <div class="field-group">
-          <label for="venueAddress">Full Address</label>
-          <div class="field-input-wrap">
-            <span class="material-symbols-rounded field-icon">map</span>
-            <input class="field-input" type="text" id="venueAddress" placeholder="Street name, building number…">
+          <div class="field-group">
+            <label for="venueAddress">العنوان الكامل</label>
+            <div class="field-input-wrap">
+              <span class="material-symbols-rounded field-icon">map</span>
+              <input class="field-input" type="text" id="venueAddress" placeholder="اسم الشارع، رقم المبنى…">
+            </div>
           </div>
-        </div>
 
-        <div class="row g-3">
-          <div class="col-6">
-            <div class="field-group mb-0">
-              <label for="venuePhone">Phone Number</label>
-              <div class="field-input-wrap">
-                <span class="material-symbols-rounded field-icon">call</span>
-                <input class="field-input" type="tel" id="venuePhone" placeholder="01xx xxx xxxx" required>
+          <div class="row g-3">
+            <div class="col-6">
+              <div class="field-group mb-0">
+                <label for="venuePhone">رقم الهاتف</label>
+                <div class="field-input-wrap">
+                  <span class="material-symbols-rounded field-icon">call</span>
+                  <input class="field-input" type="tel" id="venuePhone" placeholder="01xx xxx xxxx" required>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="field-group mb-0">
+                <label for="venueEmail">البريد الإلكتروني</label>
+                <div class="field-input-wrap">
+                  <span class="material-symbols-rounded field-icon">mail</span>
+                  <input class="field-input" type="email" id="venueEmail" placeholder="النادي@.com">
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-6">
-            <div class="field-group mb-0">
-              <label for="venueEmail">Email</label>
-              <div class="field-input-wrap">
-                <span class="material-symbols-rounded field-icon">mail</span>
-                <input class="field-input" type="email" id="venueEmail" placeholder="club@example.com">
-              </div>
-            </div>
+
+          <div class="field-group">
+            <label for="venueDesc">نبذة عن مكانك <span class="label-optional">اختياري</span></label>
+            <textarea class="field-input field-textarea" id="venueDesc"
+              placeholder="اكتب وصفاً للنادي، ما الذي يجعله مميزاً، مواقف السيارات، معالم قريبة…"></textarea>
           </div>
         </div>
 
-        <div class="field-group">
-          <label for="venueDesc">About your venue <span class="label-optional">optional</span></label>
-          <textarea class="field-input field-textarea" id="venueDesc" placeholder="Describe your club, what makes it special, parking, nearby landmarks…"></textarea>
-        </div>
-      </div>
+        <div class="wizard-step" id="step2">
+          <div class="step-header">
+            <span class="eyebrow">الخطوة 2 من 5</span>
+            <h2 class="mt-2">إعداد الملاعب</h2>
+            <p>أضف كل ملعب على حدة — الاسم، النوع، والسعر للساعة.</p>
+          </div>
 
-      <!-- ======================================
-           STEP 2 — Courts Setup
+          <div id="courtsContainer">
+            <!-- سيتم إضافة صفوف الملاعب بواسطة JavaScript -->
+          </div>
+
+          <button type="button" class="btn-add-court" id="addCourtBtn">
+            <span class="material-symbols-rounded">add_circle</span>
+            أضف ملعباً آخر
+          </button>
+        </div>
+
+        <!-- ======================================
+           الخطوة 3 — الصور
       ======================================= -->
-      <div class="wizard-step" id="step2">
-        <div class="step-header">
-          <span class="eyebrow">Step 2 of 5</span>
-          <h2 class="mt-2">Set up your courts</h2>
-          <p>Add each court individually — name, type, and price per hour.</p>
-        </div>
+        <div class="wizard-step" id="step3">
+          <div class="step-header">
+            <span class="eyebrow">الخطوة 3 من 5</span>
+            <h2 class="mt-2">تحميل صور الملاعب</h2>
+            <p>الصور الجيدة تزيد الحجوزات حتى 3 مرات. أضف صورة واحدة على الأقل لكل ملعب.</p>
+          </div>
 
-        <div id="courtsContainer">
-          <!-- Court rows injected by JS -->
-        </div>
-
-        <button type="button" class="btn-add-court" id="addCourtBtn">
-          <span class="material-symbols-rounded">add_circle</span>
-          Add another court
-        </button>
-      </div>
-
-      <!-- ======================================
-           STEP 3 — Photos
-      ======================================= -->
-      <div class="wizard-step" id="step3">
-        <div class="step-header">
-          <span class="eyebrow">Step 3 of 5</span>
-          <h2 class="mt-2">Upload court photos</h2>
-          <p>Good photos get up to 3× more bookings. Add at least one photo per court.</p>
-        </div>
-
-        <div id="photoSections">
-          <!-- Photo upload zones injected by JS based on step 2 data -->
-        </div>
-      </div>
-
-      <!-- ======================================
-           STEP 4 — Amenities & Hours
-      ======================================= -->
-      <div class="wizard-step" id="step4">
-        <div class="step-header">
-          <span class="eyebrow">Step 4 of 5</span>
-          <h2 class="mt-2">Amenities & hours</h2>
-          <p>Let players know what to expect when they arrive.</p>
-        </div>
-
-        <div class="field-group">
-          <label>Amenities available</label>
-          <div class="amenity-check-grid">
-            <label class="amenity-check-item">
-              <input type="checkbox" name="amenities" value="parking">
-              <span class="ach-box"><span class="material-symbols-rounded">local_parking</span> Free Parking</span>
-            </label>
-            <label class="amenity-check-item">
-              <input type="checkbox" name="amenities" value="cafeteria">
-              <span class="ach-box"><span class="material-symbols-rounded">local_cafe</span> Cafeteria</span>
-            </label>
-            <label class="amenity-check-item">
-              <input type="checkbox" name="amenities" value="showers">
-              <span class="ach-box"><span class="material-symbols-rounded">shower</span> Showers</span>
-            </label>
-            <label class="amenity-check-item">
-              <input type="checkbox" name="amenities" value="lockers">
-              <span class="ach-box"><span class="material-symbols-rounded">lock</span> Lockers</span>
-            </label>
-            <label class="amenity-check-item">
-              <input type="checkbox" name="amenities" value="wifi">
-              <span class="ach-box"><span class="material-symbols-rounded">wifi</span> Free Wi-Fi</span>
-            </label>
-            <label class="amenity-check-item">
-              <input type="checkbox" name="amenities" value="proshop">
-              <span class="ach-box"><span class="material-symbols-rounded">storefront</span> Pro Shop</span>
-            </label>
-            <label class="amenity-check-item">
-              <input type="checkbox" name="amenities" value="floodlights">
-              <span class="ach-box"><span class="material-symbols-rounded">light_mode</span> Floodlights</span>
-            </label>
-            <label class="amenity-check-item">
-              <input type="checkbox" name="amenities" value="academy">
-              <span class="ach-box"><span class="material-symbols-rounded">school</span> Academy / Coaching</span>
-            </label>
+          <div id="photoSections">
+            <!-- سيتم إضافة مناطق تحميل الصور بواسطة JavaScript بناءً على بيانات الخطوة 2 -->
           </div>
         </div>
 
-        <div class="field-group">
-          <label>Operating hours</label>
-          <div class="hours-grid">
-            <div class="hours-row">
-              <span class="day-label">Sat – Thu</span>
-              <div class="field-input-wrap flex-1">
-                <span class="material-symbols-rounded field-icon">schedule</span>
-                <input class="field-input" type="time" id="weekdayOpen" value="08:00">
+        <!-- ======================================
+           الخطوة 4 — المرافق وساعات العمل
+      ======================================= -->
+        <div class="wizard-step" id="step4">
+          <div class="step-header">
+            <span class="eyebrow">الخطوة 4 من 5</span>
+            <h2 class="mt-2">المرافق وساعات العمل</h2>
+            <p>دع اللاعبين يعرفون ما يمكن توقعه عند وصولهم.</p>
+          </div>
+
+          <div class="field-group">
+            <label>المرافق المتاحة</label>
+            <div class="amenity-check-grid">
+              <label class="amenity-check-item">
+                <input type="checkbox" name="amenities" value="parking">
+                <span class="ach-box"><span class="material-symbols-rounded">local_parking</span> موقف سيارات
+                  مجاني</span>
+              </label>
+              <label class="amenity-check-item">
+                <input type="checkbox" name="amenities" value="cafeteria">
+                <span class="ach-box"><span class="material-symbols-rounded">local_cafe</span> كافتيريا</span>
+              </label>
+              <label class="amenity-check-item">
+                <input type="checkbox" name="amenities" value="showers">
+                <span class="ach-box"><span class="material-symbols-rounded">shower</span> حمامات / دُش</span>
+              </label>
+              <label class="amenity-check-item">
+                <input type="checkbox" name="amenities" value="lockers">
+                <span class="ach-box"><span class="material-symbols-rounded">lock</span> خزائن</span>
+              </label>
+              <label class="amenity-check-item">
+                <input type="checkbox" name="amenities" value="wifi">
+                <span class="ach-box"><span class="material-symbols-rounded">wifi</span> واي فاي مجاني</span>
+              </label>
+              <label class="amenity-check-item">
+                <input type="checkbox" name="amenities" value="proshop">
+                <span class="ach-box"><span class="material-symbols-rounded">storefront</span> متجر المحترفين</span>
+              </label>
+              <label class="amenity-check-item">
+                <input type="checkbox" name="amenities" value="floodlights">
+                <span class="ach-box"><span class="material-symbols-rounded">light_mode</span> أضواء كاشفة</span>
+              </label>
+              <label class="amenity-check-item">
+                <input type="checkbox" name="amenities" value="academy">
+                <span class="ach-box"><span class="material-symbols-rounded">school</span> أكاديمية / تدريب</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label>ساعات العمل</label>
+            <div class="hours-grid">
+              <div class="hours-row">
+                <span class="day-label">السبت – الخميس</span>
+                <div class="field-input-wrap flex-1">
+                  <input class="field-input" type="time" id="weekdayOpen" value="08:00">
+                </div>
+                <span class="hours-sep">إلى</span>
+                <div class="field-input-wrap flex-1">
+                  <input class="field-input" type="time" id="weekdayClose" value="24:00">
+                </div>
               </div>
-              <span class="hours-sep">to</span>
-              <div class="field-input-wrap flex-1">
-                <span class="material-symbols-rounded field-icon">schedule</span>
-                <input class="field-input" type="time" id="weekdayClose" value="24:00">
+              <div class="hours-row">
+                <span class="day-label">الجمعة</span>
+                <div class="field-input-wrap flex-1">
+                  <input class="field-input" type="time" id="fridayOpen" value="10:00">
+                </div>
+                <span class="hours-sep">إلى</span>
+                <div class="field-input-wrap flex-1">
+                  <input class="field-input" type="time" id="fridayClose" value="24:00">
+                </div>
               </div>
             </div>
-            <div class="hours-row">
-              <span class="day-label">Friday</span>
-              <div class="field-input-wrap flex-1">
-                <span class="material-symbols-rounded field-icon">schedule</span>
-                <input class="field-input" type="time" id="fridayOpen" value="10:00">
-              </div>
-              <span class="hours-sep">to</span>
-              <div class="field-input-wrap flex-1">
-                <span class="material-symbols-rounded field-icon">schedule</span>
-                <input class="field-input" type="time" id="fridayClose" value="24:00">
-              </div>
+          </div>
+
+          <div class="field-group">
+            <label for="cancellationPolicy">سياسة الإلغاء</label>
+            <div class="field-input-wrap">
+              <span class="material-symbols-rounded field-icon">policy</span>
+              <select class="field-input" id="cancellationPolicy">
+                <option value="flexible">مرن — إلغاء قبل 6 ساعات</option>
+                <option value="moderate">معتدل — إلغاء قبل 24 ساعة</option>
+                <option value="strict">صارم — لا يُسمح بالإلغاء</option>
+              </select>
             </div>
           </div>
         </div>
 
-        <div class="field-group">
-          <label for="cancellationPolicy">Cancellation policy</label>
-          <div class="field-input-wrap">
-            <span class="material-symbols-rounded field-icon">policy</span>
-            <select class="field-input" id="cancellationPolicy">
-              <option value="flexible">Flexible — cancel up to 6h before</option>
-              <option value="moderate">Moderate — cancel up to 24h before</option>
-              <option value="strict">Strict — no cancellations</option>
-            </select>
+        <!-- ======================================
+           الخطوة 5 — مراجعة
+      ======================================= -->
+        <div class="wizard-step" id="step5">
+          <div class="step-header">
+            <span class="eyebrow">الخطوة 5 من 5</span>
+            <h2 class="mt-2">مراجعة القائمة</h2>
+            <p>كل شيء على ما يرام؟ سيتحقق فريقنا وينشر ملاعبك خلال 24 ساعة.</p>
+          </div>
+
+          <div class="review-card" id="reviewContent">
+            <!-- سيتم تعبئتها بواسطة JavaScript -->
+          </div>
+
+          <div class="review-agree">
+            <input type="checkbox" id="agreeTerms">
+            <label for="agreeTerms">أؤكد أن جميع المعلومات دقيقة وأوافق على <a href="./legal.html"
+                class="auth-link">شروط YallPadel لأصحاب الملاعب</a>.</label>
           </div>
         </div>
-      </div>
 
-      <!-- ======================================
-           STEP 5 — Review
-      ======================================= -->
-      <div class="wizard-step" id="step5">
-        <div class="step-header">
-          <span class="eyebrow">Step 5 of 5</span>
-          <h2 class="mt-2">Review your listing</h2>
-          <p>Everything look good? Our team will verify and publish your courts within 24 hours.</p>
+        <!-- ===== أزرار التنقل ===== -->
+        <div class="wizard-nav">
+          <button type="button" class="btn btn-ghost" id="prevBtn" style="display:none;">
+            السابق
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <button type="button" class="btn btn-accent" id="nextBtn">
+            <i class="fa-solid fa-arrow-right"></i>
+            التالي 
+          </button>
+          <button type="button" class="btn btn-accent d-none" id="submitBtn">
+            <i class="fa-solid fa-circle-check"></i>
+            إرسال القائمة 
+          </button>
         </div>
 
-        <div class="review-card" id="reviewContent">
-          <!-- Populated by JS -->
-        </div>
-
-        <div class="review-agree">
-          <input type="checkbox" id="agreeTerms">
-          <label for="agreeTerms">I confirm that all information is accurate and I agree to YallPadel's <a href="./legal.html" class="auth-link">Terms for Court Owners</a>.</label>
-        </div>
       </div>
-
-      <!-- ===== Navigation buttons ===== -->
-      <div class="wizard-nav">
-        <button type="button" class="btn btn-ghost" id="prevBtn" style="display:none;">
-          <span class="material-symbols-rounded">arrow_back</span> Back
-        </button>
-        <button type="button" class="btn btn-accent" id="nextBtn">
-          Next <span class="material-symbols-rounded">arrow_forward</span>
-        </button>
-        <button type="button" class="btn btn-accent d-none" id="submitBtn">
-          Submit Listing <span class="material-symbols-rounded">check</span>
-        </button>
-      </div>
-
     </div>
   </div>
-</div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/auth.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/auth.js"></script>
 </body>
+
+
+
 </html>

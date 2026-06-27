@@ -1,4 +1,9 @@
+
 /* ===================== Auth Pages (Login / Register) ===================== */
+
+body{
+  direction: rtl;
+}
 body.auth-page {
   background: var(--bg-primary);
 }
@@ -262,7 +267,7 @@ body.auth-page {
   background: var(--bg-secondary);
   border: 1px solid var(--border-glass);
   border-radius: var(--r-md);
-  padding: 13px 44px 13px 46px;
+  padding: 16px;
   color: var(--white);
   font-family: var(--font-body);
   font-size: 0.94rem;
@@ -283,7 +288,7 @@ body.auth-page {
 
 .field-toggle {
   position: absolute;
-  right: 14px;
+  left: 0;
   top: 50%;
   transform: translateY(-50%);
   color: var(--text-faint);
@@ -850,4 +855,9 @@ body.auth-page {
   .day-label {
     width: 100%;
   }
+}
+
+
+#regPhone,#venuePhone{
+  text-align: right;
 }

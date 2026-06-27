@@ -1,252 +1,183 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>YallPadel — Book Padel Courts in Mansoura</title>
-    <meta
-      name="description"
-      content="YallPadel gathers every padel court in Mansoura into one place. Compare prices, check real-time availability, and book your court in under a minute."
-    />
-    <link rel="icon" type="image/png" href="./assets/imgs/icon3.png" />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YallPadel — Book Padel Courts in Mansoura</title>
+  <meta name="description"
+    content="YallPadel gathers every padel court in Mansoura into one place. Compare prices, check real-time availability, and book your court in under a minute." />
+  <link rel="icon" type="image/png" href="./assets/imgs/icon3.png" />
 
-    <!-- FontAwesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    />
-    <!-- Bootstrap -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-    <!-- AOS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"
-      rel="stylesheet"
-    />
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- App styles -->
-    <link rel="stylesheet" href="./css/login.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
+  <!-- AOS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-  <body class="auth-page">
-    <div class="auth-shell">
-      <!-- ===================== Visual panel ===================== -->
-      <div class="auth-visual d-none d-lg-flex">
-        <a href="index.html" class="brand">
-          <img src="./assets/imgs/logo-removebg.png" alt="" />
-        </a>
+  <!-- App styles -->
+  <link rel="stylesheet" href="./css/login.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
 
-        <div class="auth-visual-content">
-          <h2>Join Mansoura's fastest-growing padel community.</h2>
-          <div class="auth-feature-list">
-            <div class="item">
-              <span class="material-symbols-rounded">bolt</span> Instant
-              booking, no phone calls
-            </div>
-            <div class="item">
-              <span class="material-symbols-rounded">groups</span> 10,000+
-              active players
-            </div>
-            <div class="item">
-              <span class="material-symbols-rounded">star</span> 4.9 average
-              court rating
-            </div>
+<body class="auth-page">
+  <div class="auth-shell">
+
+    <div class="auth-visual d-none d-lg-flex">
+      <a href="index.html" class="brand">
+        <img src="./assets/imgs/logo-removebg.png" alt="" />
+      </a>
+
+      <div class="auth-visual-content">
+        <h2>انضم إلى مجتمع البادل الأسرع نمواً في المنصورة.</h2>
+        <div class="auth-feature-list">
+          <div class="item">
+            <span class="material-symbols-rounded">bolt</span> حجز فوري، بدون مكالمات هاتفية
           </div>
-        </div>
-
-        <div class="auth-visual-quote">
-          <p>
-            "The live slots are the real win. My group plays last-minute on
-            Fridays and we always find an open court."
-          </p>
-          <span>— Nourhan Adel, Club Regular</span>
+          <div class="item">
+            <span class="material-symbols-rounded">groups</span> أكثر من 1,000 لاعب نشط
+          </div>
+          <div class="item">
+            <span class="material-symbols-rounded">star</span> متوسط تقييم الملاعب 4.9
+          </div>
         </div>
       </div>
 
-      <!-- ===================== Form panel ===================== -->
-      <div class="auth-form-col">
-        <div class="auth-topbar d-flex d-lg-none">
-          <a href="index.html" class="brand">
-            <img src="./assets/imgs/logo-removebg.png" alt="" />
-          </a>
-        </div>
-
-        <div class="auth-card">
-          <h1>Create your account</h1>
-          <p class="auth-sub">
-            Join YallPadel and book your first court in minutes.
-          </p>
-
-          <!-- Account type selector -->
-          <div class="account-type-selector">
-            <div class="type-card is-active" data-type="player">
-              <span class="type-icon">
-                <img src="./assets/imgs/icon-location.png" alt="">
-              </span>
-              <div class="type-info">
-                <b>Player</b>
-                <span>Book courts & manage my reservations</span>
-              </div>
-              <span class="type-check material-symbols-rounded"
-                >check_circle</span
-              >
-            </div>
-
-            <a href="./owner-register.html" class="type-card" data-type="owner">
-              <span class="type-icon owner">
-                <img src="./assets/imgs/main-icon.png" alt="">
-              </span>
-              <div class="type-info">
-                <b>Court Owner</b>
-                <span>List my courts & manage bookings</span>
-              </div>
-              <span class="type-check material-symbols-rounded"
-                >check_circle</span
-              >
-            </a>
-          </div>
-
-          <input
-            type="hidden"
-            id="accountType"
-            name="account_type"
-            value="player"
-          />
-
-          <button type="button" class="social-btn">
-            <span class="material-symbols-rounded" style="font-size: 18px"
-              >account_circle</span
-            >
-            Continue with Google
-          </button>
-
-          <div class="auth-divider">or register with email</div>
-
-          <form class="auth-form">
-            <div class="field-group">
-              <label for="regName">Full Name</label>
-              <div class="field-input-wrap">
-                <span class="material-symbols-rounded field-icon">person</span>
-                <input
-                  class="field-input"
-                  type="text"
-                  id="regName"
-                  placeholder="Your full name"
-                  required
-                />
-              </div>
-            </div>
-
-            <div class="field-group">
-              <label for="regEmail">Email</label>
-              <div class="field-input-wrap">
-                <span class="material-symbols-rounded field-icon">mail</span>
-                <input
-                  class="field-input"
-                  type="email"
-                  id="regEmail"
-                  placeholder="you@example.com"
-                  required
-                />
-              </div>
-            </div>
-
-            <div class="field-group">
-              <label for="regPhone">Phone Number</label>
-              <div class="field-input-wrap">
-                <span class="material-symbols-rounded field-icon"
-                  >smartphone</span
-                >
-                <input
-                  class="field-input"
-                  type="tel"
-                  id="regPhone"
-                  placeholder="01xx xxx xxxx"
-                  required
-                />
-              </div>
-            </div>
-
-            <div class="field-group">
-              <label for="regPassword">Password</label>
-              <div class="field-input-wrap">
-                <span class="material-symbols-rounded field-icon">lock</span>
-                <input
-                  class="field-input"
-                  type="password"
-                  id="regPassword"
-                  placeholder="Create a password"
-                  required
-                />
-                <button
-                  type="button"
-                  class="field-toggle"
-                  aria-label="Toggle password visibility"
-                >
-                  <span class="material-symbols-rounded">visibility</span>
-                </button>
-              </div>
-            </div>
-
-            <div class="field-group">
-              <label for="regConfirm">Confirm Password</label>
-              <div class="field-input-wrap">
-                <span class="material-symbols-rounded field-icon">lock</span>
-                <input
-                  class="field-input"
-                  type="password"
-                  id="regConfirm"
-                  placeholder="Re-enter your password"
-                  required
-                />
-                <button
-                  type="button"
-                  class="field-toggle"
-                  aria-label="Toggle password visibility"
-                >
-                  <span class="material-symbols-rounded">visibility</span>
-                </button>
-              </div>
-            </div>
-
-            <div class="terms-row">
-              <input type="checkbox" id="regTerms" required />
-              <label for="regTerms"
-                >I agree to YallPadel's
-                <a href="./legal.html#terms" class="auth-link">Terms of Service</a> and
-                <a href="./legal.html#privacy" class="auth-link">Privacy Policy</a>.</label
-              >
-            </div>
-
-            <button type="submit" class="btn btn-accent btn-block">
-              Create Account
-            </button>
-          </form>
-
-          <p class="auth-switch">
-            Already have an account?
-            <a href="login.html" class="auth-link">Log In</a>
-          </p>
-        </div>
+      <div class="auth-visual-quote">
+        <p>
+          "المواعيد المتاحة المباشرة هي المكسب الحقيقي. مجموعتي تلعب في اللحظة الأخيرة أيام الجمعة ودائمًا نجد ملعبًا
+          متاحًا."
+        </p>
+        <span>— نورهان عادل، لاعبة منتظمة</span>
       </div>
     </div>
 
-    <script src="js/auth.js"></script>
-  </body>
+    <div class="auth-form-col">
+      <div class="auth-topbar d-flex d-lg-none">
+        <a href="index.html" class="brand">
+          <img src="./assets/imgs/logo-removebg.png" alt="" />
+        </a>
+      </div>
+
+      <div class="auth-card">
+        <h1>أنشئ حسابك</h1>
+        <p class="auth-sub">
+          انضم إلى YallPadel واحجز ملعبك الأول في دقائق.
+        </p>
+
+        <!-- محدد نوع الحساب -->
+        <div class="account-type-selector">
+          <div class="type-card is-active" data-type="player">
+            <span class="type-icon">
+              <img src="./assets/imgs/icon-location.png" alt="">
+            </span>
+            <div class="type-info">
+              <b>لاعب</b>
+              <span>احجز الملاعب</span>
+            </div>
+            <span class="type-check material-symbols-rounded">check_circle</span>
+          </div>
+
+          <a href="./owner-register.html" class="type-card" data-type="owner">
+            <span class="type-icon owner">
+              <img src="./assets/imgs/main-icon.png" alt="">
+            </span>
+            <div class="type-info">
+              <b>مالك ملعب</b>
+              <span>اضيف ملعبي وأدير الحجوزات</span>
+            </div>
+            <span class="type-check material-symbols-rounded">check_circle</span>
+          </a>
+        </div>
+
+        <input type="hidden" id="accountType" name="account_type" value="player" />
+
+        <button type="button" class="social-btn">
+          <i class="fa-brands fa-google"></i>
+          تابع باستخدام Google
+        </button>
+
+        <div class="auth-divider">أو سجل بالبريد الإلكتروني</div>
+
+        <form class="auth-form">
+          <div class="field-group">
+            <label for="regName">الاسم الكامل</label>
+            <div class="field-input-wrap">
+              <i class="fa-solid fa-circle-user field-icon"></i>
+              <input class="field-input" type="text" id="regName" placeholder="اسمك الكامل" required />
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="regEmail">البريد الإلكتروني</label>
+            <div class="field-input-wrap">
+              <i class="fa-solid fa-envelope field-icon"></i>
+              <input class="field-input" type="email" id="regEmail" placeholder="nour123@gmai.com" required />
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="regPhone">رقم الهاتف</label>
+            <div class="field-input-wrap">
+              <i class="fa-solid fa-phone field-icon"></i>
+              <input class="field-input" type="tel" id="regPhone" placeholder="01xx xxx xxxx" required />
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="regPassword">كلمة المرور</label>
+            <div class="field-input-wrap">
+              <input class="field-input" type="password" id="regPassword"
+                placeholder="أنشئ كلمة مرور" required />
+              <button type="button" class="field-toggle" aria-label="تبديل ظهور كلمة المرور">
+                <i class="fa-solid fa-eye field-icon"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="regConfirm">تأكيد كلمة المرور</label>
+            <div class="field-input-wrap">
+              <input class="field-input" type="password" id="regConfirm" placeholder="أعد إدخال كلمة المرور" required />
+              <button type="button" class="field-toggle" aria-label="تبديل ظهور كلمة المرور">
+                <i class="fa-solid fa-eye field-icon"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="terms-row">
+            <input type="checkbox" id="regTerms" required />
+            <label for="regTerms">أوافق على
+              <a href="./legal.html#terms" class="auth-link">شروط الخدمة</a> و
+              <a href="./legal.html#privacy" class="auth-link">سياسة الخصوصية</a> الخاصة بـ YallPadel.
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-accent btn-block">
+            أنشئ الحساب
+          </button>
+        </form>
+
+        <p class="auth-switch">
+          لديك حساب بالفعل؟
+          <a href="login.html" class="auth-link">تسجيل الدخول</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+</body>
+
 </html>

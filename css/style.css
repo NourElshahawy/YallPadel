@@ -1556,7 +1556,7 @@ button {
 /* Booking summary sticky */
 .booking-summary {
   position: sticky;
-  top: 110px;
+  /* top: 110px; */
   background: var(--bg-secondary);
   border: 1px solid var(--border-glass);
   border-radius: var(--r-lg);
