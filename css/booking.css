@@ -277,12 +277,7 @@ section {
     margin: 0 auto;
     overflow: hidden;
     border-radius: 32px;
-}
-
-.booking-hero {
-
     margin-top: 20px;
-
 }
 
 .hero-slider .owl-stage {
@@ -1329,7 +1324,7 @@ section {
 
         max-height: 260px;
 
-        border-radius: 0 0 24px 24px;
+        border-radius:24px;
 
     }
 
