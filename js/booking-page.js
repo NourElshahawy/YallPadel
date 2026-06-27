@@ -150,72 +150,72 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ===================== 3. TIME SLOT SELECTION ===================== */
   let selectedSlots = [];
 
+  const allSlotCards = Array.from(document.querySelectorAll(".slot-card"));
+
+  const updateSlotDisplay = () => {
+    // حدّد range-start / range-mid / range-end
+    allSlotCards.forEach((c) => c.classList.remove("range-start", "range-mid", "range-end"));
+
+    const selected = allSlotCards.filter((c) => c.classList.contains("selected"));
+    if (selected.length === 1) {
+      selected[0].classList.add("range-start", "range-end");
+    } else if (selected.length > 1) {
+      selected[0].classList.add("range-start");
+      selected[selected.length - 1].classList.add("range-end");
+      selected.slice(1, -1).forEach((c) => c.classList.add("range-mid"));
+    }
+
+    // بيانات الملخص
+    if (!selected.length) {
+      selectedTime = null;
+      selectedPrice = 0;
+      if (summaryTime) summaryTime.textContent = "—";
+      if (summaryPrice) summaryPrice.innerHTML = `0 <span>EGP</span>`;
+      const dur = document.getElementById("summaryDuration");
+      if (dur) dur.textContent = "—";
+      updateStepsUI();
+      renderStepBar();
+      return;
+    }
+
+    const firstStart = selected[0].dataset.start;
+    const lastEnd = selected[selected.length - 1].dataset.end;
+    const total = selected.reduce((s, c) => s + Number(c.dataset.price), 0);
+    const hours = selected.length;
+
+    selectedTime = `${firstStart} الي ${lastEnd}`;
+    selectedPrice = total;
+
+    if (summaryTime) summaryTime.textContent = selectedTime;
+    if (summaryPrice) summaryPrice.innerHTML = `${total} <span>EGP</span>`;
+    if (displayPrice) displayPrice.textContent = total;
+
+    const dur = document.getElementById("summaryDuration");
+    if (dur) dur.textContent = hours === 1 ? "ساعة واحدة" : `${hours} ساعات`;
+
+    updateStepsUI();
+    renderStepBar();
+  };
+
   document.querySelectorAll(".slot-card:not(.booked)").forEach((card) => {
     card.addEventListener("click", () => {
       if (!selectedDate) return;
 
       card.classList.toggle("selected");
 
+      // checkmark
       if (card.classList.contains("selected")) {
         if (!card.querySelector(".slot-check")) {
           const chk = document.createElement("span");
           chk.className = "slot-check";
           chk.innerHTML = '<i class="fa-solid fa-check"></i>';
-
           card.appendChild(chk);
         }
       } else {
         card.querySelector(".slot-check")?.remove();
       }
 
-      // كل الساعات المختارة
-      const selectedCards = document.querySelectorAll(".slot-card.selected");
-
-      selectedSlots = [];
-
-      let totalPrice = 0;
-
-      selectedCards.forEach((slot) => {
-        selectedSlots.push(slot.dataset.time);
-
-        totalPrice += Number(slot.dataset.price);
-      });
-
-      // اعرض الساعات
-      // selectedTime = selectedSlots.join(" - ");
-
-      selectedPrice = totalPrice;
-
-      const durationElement = document.getElementById("summaryDuration");
-
-      if (selectedSlots.length === 0) {
-        selectedTime = "--";
-
-        summaryTime.textContent = "--";
-
-        durationElement.textContent = "--";
-      } else if (selectedSlots.length === 1) {
-        selectedTime = selectedSlots[0];
-
-        summaryTime.textContent = selectedTime;
-
-        durationElement.textContent = "ساعة واحدة";
-      } else {
-        const first = selectedSlots[0];
-        const last = selectedSlots[selectedSlots.length - 1];
-
-        summaryTime.textContent = `${last} → ${first}`;
-
-        durationElement.textContent = `${selectedSlots.length} ساعات`;
-      }
-
-      if (summaryPrice) summaryPrice.innerHTML = `${selectedPrice} <span>EGP</span>`;
-
-      if (displayPrice) displayPrice.textContent = selectedPrice;
-
-      updateStepsUI();
-
-      renderStepBar();
+      updateSlotDisplay();
     });
   });
 
