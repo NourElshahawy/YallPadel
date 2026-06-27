@@ -148,32 +148,73 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* ===================== 3. TIME SLOT SELECTION ===================== */
+  let selectedSlots = [];
+
   document.querySelectorAll(".slot-card:not(.booked)").forEach((card) => {
     card.addEventListener("click", () => {
-      if (!selectedDate) return; // locked
+      if (!selectedDate) return;
 
-      document.querySelectorAll(".slot-card.selected").forEach((s) => {
-        s.classList.remove("selected");
-        s.querySelector(".slot-check")?.remove();
-      });
+      card.classList.toggle("selected");
 
-      card.classList.add("selected");
+      if (card.classList.contains("selected")) {
+        if (!card.querySelector(".slot-check")) {
+          const chk = document.createElement("span");
+          chk.className = "slot-check";
+          chk.innerHTML = '<i class="fa-solid fa-check"></i>';
 
-      if (!card.querySelector(".slot-check")) {
-        const chk = document.createElement("span");
-        chk.className = "slot-check";
-        chk.innerHTML = '<i class="fa-solid fa-check"></i>';
-        card.appendChild(chk);
+          card.appendChild(chk);
+        }
+      } else {
+        card.querySelector(".slot-check")?.remove();
       }
 
-      selectedTime = card.dataset.time;
-      selectedPrice = parseInt(card.dataset.price || 150);
+      // كل الساعات المختارة
+      const selectedCards = document.querySelectorAll(".slot-card.selected");
 
-      if (summaryTime) summaryTime.textContent = selectedTime;
+      selectedSlots = [];
+
+      let totalPrice = 0;
+
+      selectedCards.forEach((slot) => {
+        selectedSlots.push(slot.dataset.time);
+
+        totalPrice += Number(slot.dataset.price);
+      });
+
+      // اعرض الساعات
+      // selectedTime = selectedSlots.join(" - ");
+
+      selectedPrice = totalPrice;
+
+      const durationElement = document.getElementById("summaryDuration");
+
+      if (selectedSlots.length === 0) {
+        selectedTime = "--";
+
+        summaryTime.textContent = "--";
+
+        durationElement.textContent = "--";
+      } else if (selectedSlots.length === 1) {
+        selectedTime = selectedSlots[0];
+
+        summaryTime.textContent = selectedTime;
+
+        durationElement.textContent = "ساعة واحدة";
+      } else {
+        const first = selectedSlots[0];
+        const last = selectedSlots[selectedSlots.length - 1];
+
+        summaryTime.textContent = `${last} → ${first}`;
+
+        durationElement.textContent = `${selectedSlots.length} ساعات`;
+      }
+
       if (summaryPrice) summaryPrice.innerHTML = `${selectedPrice} <span>EGP</span>`;
+
       if (displayPrice) displayPrice.textContent = selectedPrice;
 
       updateStepsUI();
+
       renderStepBar();
     });
   });
