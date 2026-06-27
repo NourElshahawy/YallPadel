@@ -1495,9 +1495,10 @@ section {
     align-items: center;
     justify-content: center;
     gap: 0;
+    margin: 20px 0;
     padding: 20px 16px;
     background: rgba(255, 255, 255, .03);
-    border-bottom: 1px solid rgba(255, 255, 255, .06);
+    border: 1px solid rgba(255, 255, 255, .06);
 }
 
 .step-item {

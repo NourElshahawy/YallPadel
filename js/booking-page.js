@@ -64,8 +64,8 @@ document.addEventListener("DOMContentLoaded", () => {
           <span>اختر الوقت</span>
         </div>
       `;
-      // Insert after court-card section
-      const courtCard = document.querySelector(".court-card");
+      // Insert after booking-hero section
+      const courtCard = document.querySelector(".booking-hero");
       courtCard?.insertAdjacentElement("afterend", existing);
     }
 
