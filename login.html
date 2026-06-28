@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>YallPadel — Book Padel Courts in Mansoura</title>
+  <title>InstaPadel — Book Padel Courts in Mansoura</title>
   <meta name="description"
-    content="YallPadel gathers every padel court in Mansoura into one place. Compare prices, check real-time availability, and book your court in under a minute." />
+    content="InstaPadel gathers every padel court in Mansoura into one place. Compare prices, check real-time availability, and book your court in under a minute." />
   <link rel="icon" type="image/png" href="./assets/imgs/icon3.png">
 
   <!-- Fonts -->
@@ -30,82 +30,81 @@
   <link rel="stylesheet" href="./css/login.css">
   <link rel="stylesheet" href="./css/style.css" />
 </head>
+
 <body class="auth-page">
 
   <div class="auth-shell">
 
-    <!-- ===================== Visual panel ===================== -->
+    <!-- ===================== اللوحة البصرية ===================== -->
     <div class="auth-visual d-none d-lg-flex">
       <a href="index.html" class="brand">
-        <img src="./assets/imgs/logo-removebg.png" alt="">
+        <img src="./assets/imgs/logo.png" alt="">
       </a>
 
       <div class="auth-visual-content">
-        <h2>Every court in Mansoura, one tap away.</h2>
+        <h2>جميع ملاعب المنصورة، بلمسة واحدة.</h2>
         <div class="auth-feature-list">
-          <div class="item"><span class="material-symbols-rounded">bolt</span> Real-time slot availability</div>
-          <div class="item"><span class="material-symbols-rounded">verified_user</span> 100+ verified courts</div>
-          <div class="item"><span class="material-symbols-rounded">lock</span> Secure online payment</div>
+          <div class="item"><span class="material-symbols-rounded">bolt</span> توفر المواعيد في الوقت الفعلي</div>
+          <div class="item"><span class="material-symbols-rounded">verified_user</span> أكثر من 100 ملعب موثّق</div>
+          <div class="item"><span class="material-symbols-rounded">lock</span> دفع إلكتروني آمن</div>
         </div>
       </div>
 
       <div class="auth-visual-quote">
-        <p>"I used to call three clubs before finding a free court. Now I check YallPadel and I'm playing twenty minutes
-          later."</p>
-        <span>— Ahmed Saeed, Weekly Player</span>
+        <p>"كنت أتصل بثلاثة أندية قبل أن أجد ملعبًا متاحًا. الآن أتحقق من InstaPadel وألعب بعد عشرين دقيقة."</p>
+        <span>— أحمد سعيد، لاعب أسبوعي</span>
       </div>
     </div>
 
-    <!-- ===================== Form panel ===================== -->
+    <!-- ===================== لوحة النموذج ===================== -->
     <div class="auth-form-col">
       <div class="auth-topbar d-flex d-lg-none">
         <a href="index.html" class="brand">
-        <img src="./assets/imgs/logo-removebg.png" alt="">
-      </a>
+          <img src="./assets/imgs/logo.png" alt="">
+        </a>
       </div>
 
       <div class="auth-card">
-        <h1>Welcome back</h1>
-        <p class="auth-sub">Log in to book your next court in under a minute.</p>
+        <h1>مرحبًا بعودتك</h1>
+        <p class="auth-sub">سجّل الدخول لتحجز ملعبك التالي في أقل من دقيقة.</p>
 
         <button type="button" class="social-btn">
-          <span class="material-symbols-rounded" style="font-size:18px;">account_circle</span>
-          Continue with Google
+          <i class="fa-brands fa-google"></i>
+          تابع باستخدام Google
         </button>
 
-        <div class="auth-divider">or log in with email</div>
+        <div class="auth-divider">أو سجّل الدخول بالبريد الإلكتروني</div>
 
         <form class="auth-form">
           <div class="field-group">
-            <label for="loginEmail">Email</label>
+            <label for="loginEmail">البريد الإلكتروني</label>
             <div class="field-input-wrap">
-              <span class="material-symbols-rounded field-icon">mail</span>
-              <input class="field-input" type="email" id="loginEmail" placeholder="you@example.com" required>
+              <i class="fa-solid fa-envelope field-icon"></i>
+              <input class="field-input" type="email" id="loginEmail" placeholder="nour123@gmail.com" required>
             </div>
           </div>
 
           <div class="field-group">
-            <label for="loginPassword">Password</label>
+            <label for="loginPassword">كلمة المرور</label>
             <div class="field-input-wrap">
-              <span class="material-symbols-rounded field-icon">lock</span>
-              <input class="field-input" type="password" id="loginPassword" placeholder="Enter your password" required>
-              <button type="button" class="field-toggle" aria-label="Toggle password visibility">
-                <span class="material-symbols-rounded">visibility</span>
+              <input class="field-input" type="password" id="loginPassword" placeholder="أدخل كلمة المرور" required>
+              <button type="button" class="field-toggle" aria-label="تبديل ظهور كلمة المرور">
+                <i class="fa-solid fa-eye field-icon"></i>
               </button>
             </div>
           </div>
 
           <div class="field-row-between">
             <label class="remember-check">
-              <input type="checkbox"> Remember me
+              <input type="checkbox"> تذكرني
             </label>
-            <a href="#" class="auth-link">Forgot password?</a>
+            <a href="#" class="auth-link">نسيت كلمة المرور؟</a>
           </div>
 
-          <button type="submit" class="btn btn-accent btn-block">Log In</button>
+          <button type="submit" class="btn btn-accent btn-block">تسجيل الدخول</button>
         </form>
 
-        <p class="auth-switch">Don't have an account? <a href="register.html" class="auth-link">Create one</a></p>
+        <p class="auth-switch">ليس لديك حساب؟ <a href="register.html" class="auth-link">أنشئ واحدًا</a></p>
       </div>
     </div>
 

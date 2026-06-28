@@ -1,65 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Booking Confirmed — YallPadel</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Padel Arena Mansoura — InstaPadel</title>
+    <link rel="icon" type="image/png" href="./assets/imgs/icon3.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/booking-confirmation.css">
 </head>
+
+
 <body>
 
 <!-- Navbar -->
-<header class="navbar-ph">
-  <div class="container d-flex align-items-center justify-content-between">
-    <a href="index.html" class="brand"><span class="dot"></span> YallPadel</a>
-    <div class="navbar-cta">
-      <a href="login.html" class="btn btn-ghost btn-sm">Log In</a>
-      <a href="register.html" class="btn btn-accent btn-sm">Register</a>
-    </div>
-  </div>
-</header>
-
 <main class="confirmation-main">
   <div class="container">
     <div class="confirmation-grid">
 
-      <!-- ===== Left col ===== -->
+      <!-- ===== العمود الأيسر ===== -->
       <div class="confirmation-left">
 
-        <!-- Email notice -->
+        <!-- إشعار البريد الإلكتروني -->
         <div class="email-notice" id="emailNotice">
           <div class="email-icon">
             <span class="material-symbols-rounded">mark_email_read</span>
           </div>
           <div>
-            <b>Confirmation sent to your email</b>
+            <b>تم إرسال التأكيد إلى بريدك الإلكتروني</b>
             <span>ahmed@example.com</span>
           </div>
-          <button class="email-dismiss" id="emailDismiss" aria-label="Dismiss">
+          <button class="email-dismiss" id="emailDismiss" aria-label="إغلاق">
             <span class="material-symbols-rounded">close</span>
           </button>
         </div>
 
-        <!-- Booking ID + status pill -->
+        <!-- معرف الحجز + حالة الحجز -->
         <div class="booking-header">
           <div>
-            <p class="booking-id">Booking <b>#YP-20260624-0841</b></p>
-            <h1>You're all set. See you on the court.</h1>
+            <p class="booking-id">الحجز <b>#YP-20260624-0841</b></p>
+            <h1>كل شيء جاهز. نراكم في الملعب.</h1>
           </div>
           <span class="status-pill confirmed">
-            <span class="pulse-dot"></span> Confirmed
+            <span class="pulse-dot"></span> مؤكد
           </span>
         </div>
 
-        <!-- ===== Tracker ===== -->
+        <!-- ===== متتبع الحالة ===== -->
         <div class="tracker-card">
-          <h3>Booking Status</h3>
+          <h3>حالة الحجز</h3>
 
           <div class="tracker">
 
@@ -68,9 +72,9 @@
                 <span class="material-symbols-rounded">check_circle</span>
               </div>
               <div class="ts-body">
-                <b>Booking Confirmed</b>
-                <span>Your slot is reserved at Padel Arena Mansoura</span>
-                <span class="ts-time">Today, 2:41 PM</span>
+                <b>تم تأكيد الحجز</b>
+                <span>تم حجز الفترة الخاصة بك في بادل أرينا المنصورة</span>
+                <span class="ts-time">اليوم، ٢:٤١ م</span>
               </div>
             </div>
 
@@ -79,9 +83,9 @@
                 <span class="material-symbols-rounded">check_circle</span>
               </div>
               <div class="ts-body">
-                <b>Email Sent</b>
-                <span>Confirmation emailed to ahmed@example.com</span>
-                <span class="ts-time">Today, 2:41 PM</span>
+                <b>تم إرسال البريد الإلكتروني</b>
+                <span>تم إرسال التأكيد إلى ahmed@example.com</span>
+                <span class="ts-time">اليوم، ٢:٤١ م</span>
               </div>
             </div>
 
@@ -90,53 +94,53 @@
                 <span class="material-symbols-rounded">payments</span>
               </div>
               <div class="ts-body">
-                <b>Payment</b>
-                <span id="paymentStatusText">Awaiting payment via InstaPay</span>
+                <b>الدفع</b>
+                <span id="paymentStatusText">في انتظار الدفع عبر InstaPay</span>
                 <span class="ts-time" id="paymentTime">—</span>
 
-                <!-- InstaPay CTA -->
+                <!-- منطقة InstaPay -->
                 <div class="instapay-block" id="instapayBlock">
                   <div class="instapay-amount">
-                    <span>Total due</span>
-                    <b>300 EGP</b>
+                    <span>المبلغ المستحق</span>
+                    <b>٣٠٠ ج.م</b>
                   </div>
                   <div class="instapay-steps">
                     <div class="instapay-step">
-                      <span class="instapay-num">1</span>
-                      <span>Open your banking app or InstaPay</span>
+                      <span class="instapay-num">١</span>
+                      <span>افتح تطبيق البنك أو InstaPay</span>
                     </div>
                     <div class="instapay-step">
-                      <span class="instapay-num">2</span>
-                      <span>Send <b>300 EGP</b> to InstaPay number</span>
+                      <span class="instapay-num">٢</span>
+                      <span>أرسل <b>٣٠٠ ج.م</b> إلى رقم InstaPay</span>
                     </div>
                     <div class="instapay-step">
-                      <span class="instapay-num">3</span>
-                      <span>Use booking ID <b>#YP-20260624-0841</b> as the transfer note</span>
+                      <span class="instapay-num">٣</span>
+                      <span>استخدم معرف الحجز <b>#YP-20260624-0841</b> كملاحظة التحويل</span>
                     </div>
                   </div>
                   <div class="instapay-number-box">
                     <span class="material-symbols-rounded">smartphone</span>
                     <div>
-                      <span class="inp-label">InstaPay Number</span>
-                      <b class="inp-num" id="instapayNum">01065801252</b>
+                      <span class="inp-label">رقم InstaPay</span>
+                      <b class="inp-num" id="instapayNum">٠١٠٦٥٨٠١٢٥٢</b>
                     </div>
-                    <button class="btn-copy" id="copyBtn" aria-label="Copy number">
+                    <button class="btn-copy" id="copyBtn" aria-label="نسخ الرقم">
                       <span class="material-symbols-rounded">content_copy</span>
                     </button>
                   </div>
                   <button class="btn btn-accent btn-block" id="markPaidBtn">
-                    I've sent the payment
+                    لقد قمت بإرسال الدفع
                   </button>
                   <p class="instapay-note">
                     <span class="material-symbols-rounded">info</span>
-                    Payment is verified manually. Your court is reserved for <b id="holdTimer">15:00</b>.
+                    يتم التحقق من الدفع يدوياً. تم حجز ملعبك لمدة <b id="holdTimer">١٥:٠٠</b>.
                   </p>
                 </div>
 
-                <!-- Paid state (hidden by default) -->
+                <!-- حالة الدفع (مخفية افتراضياً) -->
                 <div class="paid-badge d-none" id="paidBadge">
                   <span class="material-symbols-rounded">verified</span>
-                  Payment submitted — under review
+                  تم إرسال الدفع — قيد المراجعة
                 </div>
               </div>
             </div>
@@ -146,9 +150,9 @@
                 <span class="material-symbols-rounded">sports_tennis</span>
               </div>
               <div class="ts-body">
-                <b>Head to the Court</b>
-                <span>Show your booking ID at the entrance</span>
-                <span class="ts-time">Tomorrow, Sun 21 Jun · 5:00 PM</span>
+                <b>توجه إلى الملعب</b>
+                <span>أظهر معرف الحجز عند المدخل</span>
+                <span class="ts-time">غداً، الأحد ٢١ يونيو · ٥:٠٠ م</span>
               </div>
             </div>
 
@@ -157,77 +161,78 @@
                 <span class="material-symbols-rounded">trophy</span>
               </div>
               <div class="ts-body">
-                <b>Play & Enjoy</b>
-                <span>Court 1 · Regular · 2 hours · Padel Arena Mansoura</span>
-                <span class="ts-time">5:00 PM – 7:00 PM</span>
+                <b>العب واستمتع</b>
+                <span>ملعب ١ · عادي · ساعتان · بادل أرينا المنصورة</span>
+                <span class="ts-time">٥:٠٠ م – ٧:٠٠ م</span>
               </div>
             </div>
 
           </div>
         </div>
 
-        <!-- Book again CTA -->
+        <!-- حجز مرة أخرى -->
         <div class="book-again-card">
           <div class="bag-icon">
             <span class="material-symbols-rounded">add_circle</span>
           </div>
           <div class="bag-text">
-            <b>Want to book another session?</b>
-            <span>Browse all available courts and slots across Mansoura.</span>
+            <b>هل تريد حجز جلسة أخرى؟</b>
+            <span>تصفح جميع الملاعب والفترات المتاحة في جميع أنحاء المنصورة.</span>
           </div>
           <a href="courts.html" class="btn btn-accent btn-sm">
-            Book Again <span class="material-symbols-rounded">arrow_forward</span>
+            حجز مرة أخرى <i class="fa-solid fa-arrow-left"></i>
           </a>
         </div>
 
       </div>
 
-      <!-- ===== Right col — booking summary ===== -->
+      <!-- ===== العمود الأيمن — ملخص الحجز ===== -->
       <div class="confirmation-right">
         <div class="summary-sticky">
 
           <div class="summary-venue-img">
-            <img src="./assets/imgs/img1.jpg" alt="Padel Arena Mansoura">
+            <img src="./assets/imgs/padelgo/Image4.jpeg" alt="بادل Go المنصورة">
             <div class="svi-overlay">
               <span class="court-badge-live" style="position:static;display:inline-flex;">
-                <span class="pulse-dot"></span> Live
+                <span class="pulse-dot"></span> مباشر
               </span>
             </div>
           </div>
 
           <div class="summary-body">
-            <h3 class="summary-venue-name">Padel Arena Mansoura</h3>
-            <span class="summary-loc">
-              <span class="material-symbols-rounded">location_on</span>
-              El Mashaya, Mansoura
-            </span>
+            <h3 class="summary-venue-name">بادل  Padel Go</h3>
+            <a href="https://www.google.com/maps/dir//padel+go%D8%8C+%D8%A7%D9%84%D9%85%D9%86%D8%B5%D9%88%D8%B1%D8%A9+(%D9%82%D8%B3%D9%85+2)%D8%8C+%D8%A7%D9%84%D9%85%D9%86%D8%B5%D9%88%D8%B1%D8%A9%D8%8C+%D9%85%D8%AD%D8%A7%D9%81%D8%B8%D8%A9+%D8%A7%D9%84%D8%AF%D9%82%D9%87%D9%84%D9%8A%D8%A9+7662001%E2%80%AD/@31.0522674,31.408128,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x14f79d007472c009:0xfd9370e4541b7d34!2m2!1d31.405746!2d31.0408811?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D"
+                    class="court-loc-inline">
+                    <i class="fa-solid fa-location-dot"></i>
+                    المنصورة الطريق السريع
+              </a>
 
             <div class="summary-rows">
-              <div class="summary-row"><span>Court</span><span>Court 1 · Regular</span></div>
-              <div class="summary-row"><span>Date</span><span>Sun, 21 Jun 2026</span></div>
-              <div class="summary-row"><span>Time</span><span>5 PM, 6 PM</span></div>
-              <div class="summary-row"><span>Duration</span><span>2 hours</span></div>
+              <div class="summary-row"><span>الملعب</span><span>ملعب ١ · عادي</span></div>
+              <div class="summary-row"><span>التاريخ</span><span>الأحد، ٢١ يونيو ٢٠٢٦</span></div>
+              <div class="summary-row"><span>الوقت</span><span>٥ م، ٦ م</span></div>
+              <div class="summary-row"><span>المدة</span><span>ساعتان</span></div>
             </div>
 
             <div class="summary-total-row">
-              <span>Total</span>
-              <b>300 EGP</b>
+              <span>الإجمالي</span>
+              <b>٣٠٠ ج.م</b>
             </div>
 
             <div class="payment-status-badge" id="summaryPaymentBadge">
               <span class="material-symbols-rounded">pending</span>
-              <span>Awaiting payment</span>
+              <span>في انتظار الدفع</span>
             </div>
 
             <div class="summary-actions">
               <a href="#" class="summary-action-btn">
-                <span class="material-symbols-rounded">download</span> Download receipt
+                <span class="material-symbols-rounded">download</span> تحميل الإيصال
               </a>
               <a href="#" class="summary-action-btn">
-                <span class="material-symbols-rounded">share</span> Share booking
+                <span class="material-symbols-rounded">share</span> مشاركة الحجز
               </a>
               <a href="#" class="summary-action-btn danger">
-                <span class="material-symbols-rounded">cancel</span> Cancel booking
+                <span class="material-symbols-rounded">cancel</span> إلغاء الحجز
               </a>
             </div>
 

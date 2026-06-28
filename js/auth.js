@@ -218,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const price = row.querySelector('.court-price-input')?.value || '—';
       return `<div class="review-row">
         <span>${name} (${type})</span>
-        <span>${price} EGP/hr</span>
+        <span>${price} جنيه/ساعة</span>
       </div>`;
     }).join('');
 
@@ -230,23 +230,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     el.innerHTML = `
       <div class="review-section">
-        <h4>Venue</h4>
-        <div class="review-row"><span>Name</span><span>${venueName}</span></div>
-        <div class="review-row"><span>Area</span><span>${venueArea}</span></div>
-        <div class="review-row"><span>Phone</span><span>${venuePhone}</span></div>
-        <div class="review-row"><span>Email</span><span>${venueEmail}</span></div>
+        <h4>الملعب</h4>
+        <div class="review-row"><span>الاسم</span><span>${venueName}</span></div>
+        <div class="review-row"><span>العنوان</span><span>${venueArea}</span></div>
+        <div class="review-row"><span>رقم التواصل</span><span>${venuePhone}</span></div>
+        <div class="review-row"><span>الايميل</span><span>${venueEmail}</span></div>
       </div>
       <div class="review-section">
-        <h4>Courts (${courtRows.length})</h4>
+        <h4>ملعب (${courtRows.length})</h4>
         ${courtsSummary}
       </div>
       <div class="review-section">
-        <h4>Amenities</h4>
+        <h4>المرافق</h4>
         <div class="review-row"><span>Available</span><span>${checkedAmenities}</span></div>
       </div>
       <div class="review-section">
-        <h4>Policy</h4>
-        <div class="review-row"><span>Cancellation</span><span>${cancelPolicy}</span></div>
+        <h4>سياسة الالغاء</h4>
+        <div class="review-row"><span>الالغاء</span><span>${cancelPolicy}</span></div>
       </div>
     `;
   };
@@ -270,7 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
     submitBtn.disabled = true;
     // TODO: POST to /api/owner/venues
     setTimeout(() => {
-      submitBtn.innerHTML = '✓ Submitted — we\'ll review within 24h';
+      submitBtn.innerHTML = "✓ تم الإرسال - سنراجع الطلب خلال 24 ساعة";
     }, 1600);
   });
 
