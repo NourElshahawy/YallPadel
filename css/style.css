@@ -124,12 +124,6 @@ button {
 
 /* background for ios and android */
 
-.fixed-bg{
-  position: fixed;
-  inset: 0;
-  background: url("../assets/imgs/courts-bg.png") center/cover no-repeat;
-  z-index: -1;
-}
 
 /* background for ios and android */
 
@@ -174,15 +168,7 @@ button {
   position: relative;
 }
 
-.section-tight {
-  padding: 80px 0;
-  /* background-image: url("../assets/imgs/courts-bg.png");
-  background-size: cover;
-  background-position: center; */
-  /* background-attachment: fixed; */
 
-  z-index: -3;
-}
 
 @media (max-width: 991px) {
   .section {
@@ -227,10 +213,10 @@ button {
 }
 
 .btn-accent:hover {
-  background: var(--accent-dark);
-  color: #04140e;
-  transform: translateY(-2px);
-  box-shadow: 0 14px 34px rgba(0, 214, 143, 0.4);
+border: 1px solid var(--accent-dark);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 34px rgba(0, 214, 143, 0.4);
 }
 
 .btn-ghost {
@@ -464,7 +450,7 @@ button {
   background-image: url(../assets/imgs/img1.jpg);
   background-size: cover;
   background-position: center;
-  /* background-attachment: fixed; */
+  background-attachment: scroll;
   z-index: -3;
 }
 .hero::after {
@@ -907,7 +893,7 @@ button {
   background-image: url("../assets/imgs/courts-bg.png");
   background-size: cover;
   background-position: center;
-  /* background-attachment: fixed; */
+  background-attachment: scroll;
 
   z-index: -3;
 }
@@ -1205,7 +1191,7 @@ button {
 }
 /* ===================== Why choose ===================== */
 .feature-card {
-  background: var(--bg-secondary);
+  background: transparent;
   border: 1px solid var(--border-glass);
   border-radius: var(--r-lg);
   padding: 34px 28px;
@@ -1309,7 +1295,6 @@ button {
 
 /* ===================== Footer ===================== */
 .footer {
-  background: var(--bg-secondary);
   border-top: 1px solid var(--border-glass);
   padding: 70px 0 28px;
 }
@@ -1927,10 +1912,10 @@ button {
 =================================================================== */
 .listing-hero {
   padding: 150px 0 50px;
-  /* background-image: url("../assets/imgs/courts-bg.png");
+  background-image: url("../assets/imgs/courts-bg.png");
   background-size: cover;
-  background-position: center; */
-  /* background-attachment: fixed; */
+  background-position: center;
+  background-attachment: scroll;
 
   z-index: -3;
   border-bottom: 1px solid var(--border-glass);
@@ -2222,7 +2207,7 @@ button {
   background-image: url("../assets/imgs/courts-bg.png");
   background-size: cover;
   background-position: center;
-  /* background-attachment: fixed; */
+  background-attachment: scroll;
 
   z-index: -3;
 }
@@ -2364,7 +2349,7 @@ button {
   gap: 16px;
   align-items: center;
   flex: 1;
-  background: var(--bg-elevated);
+  background: transparent;
   border: 1px solid var(--border-glass);
   border-radius: var(--r-md);
   padding: 14px;
