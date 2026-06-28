@@ -179,9 +179,9 @@ button {
   position: absolute;
   inset: 0;
   background-image: url("../assets/imgs/courts-bg.png");
-  background-size: cover;
+  background-size: contain;
   background-position: center;
-  background-attachment: scroll;
+  background-attachment: fixed;
 
   z-index: -3;
 }
