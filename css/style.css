@@ -122,6 +122,17 @@ button {
   max-width: 90%;
 }
 
+/* background for ios and android */
+
+.fixed-bg{
+  position: fixed;
+  inset: 0;
+  background: url("../assets/imgs/courts-bg.png") center/cover no-repeat;
+  z-index: -1;
+}
+
+/* background for ios and android */
+
 /* ===================== Utility / Type scale ===================== */
 .eyebrow {
   display: inline-flex;
@@ -165,10 +176,10 @@ button {
 
 .section-tight {
   padding: 80px 0;
-    background-image: url("../assets/imgs/courts-bg.png");
+  /* background-image: url("../assets/imgs/courts-bg.png");
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-position: center; */
+  /* background-attachment: fixed; */
 
   z-index: -3;
 }
@@ -453,7 +464,7 @@ button {
   background-image: url(../assets/imgs/img1.jpg);
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   z-index: -3;
 }
 .hero::after {
@@ -896,7 +907,7 @@ button {
   background-image: url("../assets/imgs/courts-bg.png");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
 
   z-index: -3;
 }
@@ -1187,8 +1198,9 @@ button {
   gap: 10px;
 }
 
-
-.court-loc-inline i,.fa-calendar-days,.fa-location-dot{
+.court-loc-inline i,
+.fa-calendar-days,
+.fa-location-dot {
   color: var(--accent);
 }
 /* ===================== Why choose ===================== */
@@ -1915,10 +1927,10 @@ button {
 =================================================================== */
 .listing-hero {
   padding: 150px 0 50px;
-    background-image: url("../assets/imgs/courts-bg.png");
+  /* background-image: url("../assets/imgs/courts-bg.png");
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-position: center; */
+  /* background-attachment: fixed; */
 
   z-index: -3;
   border-bottom: 1px solid var(--border-glass);
@@ -2210,7 +2222,7 @@ button {
   background-image: url("../assets/imgs/courts-bg.png");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
 
   z-index: -3;
 }
